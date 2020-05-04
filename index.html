@@ -9,6 +9,7 @@
         <script src="Javascript/scripts.js" defer></script>
     </head>
     <body>   
+        <!-- header section with logo and menu -->
         <header>
             <div class ="head-container">
                 <div id="hamburger-menu"><img src="images/Hamburger-Menu.png" id="menu"></div>
@@ -22,11 +23,41 @@
                         <li class="menu-border"><a href="index.html"><p class="active">Home</p></a></li>
                         <li class="menu-border"><a href="services.html">Services</a></li>
                         <li class="menu-border"><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li class="menu-border"><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
+        <!-- slideshow image carousel -->
+        <div class="desktop-container">
+            <div class="carousel-container">
+                <div class="slideshow-container">
+                    <div class ="slide fade">
+                        <img src="images/home/25-Special-Edition-Modern-House-Design-for-your-2020-Architectural-Inspiration-25.jpg">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/home/bathroom-reno.jpg">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/home/exterior-finishing.jpg">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            <div id="submit">
+                <div id="submit-button">
+                    <div class="halfCircleLeft request-hover" onmouse><a href="contact.html"></a></div>
+                    <div class="rectangle request-hover"><a href="contact.html">request<br>quote</a></div>
+                    <div class="halfCircleRight request-hover"><a href="contact.html"></a></div>
+                </div>
+            </div>
+        </div>
         <footer>
 
         </footer>
