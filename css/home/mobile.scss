@@ -1,5 +1,5 @@
 $font-stack: Helvetica, sans-serif;
-$font-color: rgb(255, 255, 255);
+$font-color: rgb(233, 233, 233);
 $background-color: rgb(22, 22, 22);
 $logo-color: #ef9629;
 $hover-background: rgb(95, 95, 95);
@@ -39,12 +39,14 @@ header {
     .head-container{
         display: flex;
         position:fixed;
+        z-index: 98;
         width: 100vw;
         height: 10vh;
         flex-direction: row;
         justify-content: flex-end;
         align-items: right;
         background-color: $background-color;
+        opacity: 0.95;
         #hamburger-menu{
             display:flex;
             margin: 0;
@@ -52,16 +54,19 @@ header {
             background-color: $background-color;
             align-self: center;
             justify-content: flex-end;
+            height: 10vh;
             img {
                 display: flex;
                 align-self:center;
-                width: auto;
+                //width: auto;
+                z-index: 99;
                 height: 8vh;
                 min-height: 42px;
                 max-height: 47px;
-                padding-right: 20px;
-                padding-top: 10px;
-                padding-bottom: 5px;
+                padding-right: 6vw;
+                padding-top: 1vh;
+                padding-bottom: 1vh;
+                opacity: 1;
 
             }
         }
@@ -77,13 +82,13 @@ header {
             z-index: 100;
             position: fixed;
             display:flex;
-            height: 89vh;
+            height: 90vh;
             width: 75vw;
-            top: 11vh;
+            top: 10vh;
             align-items:center;
             justify-content: space-around;
             background-color: $background-color;
-            opacity: 0.9;
+            opacity: 0.95;
             transform: translateX(100%);
             transition: transform 0.5s ease-in;
             ul{
@@ -132,9 +137,15 @@ header {
 }
 
 // slideshow carousel 
+.carousel-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //justify-content: center;
+}
 
  .slideshow-container{
-    width: 100vw;
+    width: 90vw;
     position: relative;
     overflow: hidden; // crops pictures
     height: 50vh;
@@ -156,7 +167,7 @@ header {
         position: absolute;
         top: 40%;
         width: auto;
-        padding: 15px;
+        padding: 5vw;
         color: white;
         font-weight: bold;
         font-size: 25px;
@@ -166,6 +177,7 @@ header {
 
     .next{
         right: 0;
+        //margin-right: 4vw;
     }
 
     .prev:hover, .next:hover{
@@ -244,4 +256,45 @@ header {
 #submit-button:hover > div{
     background-color: $hover-background;    
     color: black;
+}
+
+#downward-arrow{
+    transform: rotate(270deg);
+    margin-top: 2vh;
+    text-align: center;
+    a{
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 30px;
+        user-select: none;
+    }
+}
+
+#about-us-container{
+    text-align: center;
+    color: $font-color;
+    h2{
+        margin-top: 2vh;
+        text-decoration: underline;
+        font-size: 19px;
+    }
+    p{
+        margin-top: 2vh;
+        padding: 0 3vw 0 3vw;
+        font-size: 14px;
+    }
+}
+
+#line{
+    border-top: 1px solid $logo-color;
+    margin-top: 2vh;
+}
+
+#contact-info{
+    margin:2vh 0 2vh 0;
+    color: $font-color;
+    text-align: center;
+    font-size: 15px;
 }
