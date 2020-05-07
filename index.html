@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/png" href="images/PPC_Favicon_Orange.png">
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/home/mobile.css">  
+        <link rel="stylesheet" href="css/home/mobile.css"> 
+        <link rel="stylesheet" href="css/home/landscape.css"> 
+        <link rel="stylesheet" href="css/home/desktop.css">
         <script src="Javascript/scripts.js" defer></script>
     </head>
     <body>   
@@ -17,6 +19,7 @@
             <div class = "logo-container">
                 <div class="logo"><img src="images/PPC_Alternate_White_Orange.png"></div>
             </div>
+            <div class="line-desktop"></div>
             <div class ="menu-container">
                 <nav class="nav">
                     <ul>
@@ -27,6 +30,7 @@
                     </ul>
                 </nav>
             </div>
+            <div class="line-desktop"></div>
         </header>
         <!-- slideshow image carousel -->
         <div class="desktop-container">
@@ -53,15 +57,19 @@
             <div id="submit">
                 <div id="submit-button">
                     <div class="halfCircleLeft" onmouse><a href="contact.html"></a></div>
-                    <div class="rectangle"><a href="contact.html">request<br>quote</a></div>
+                    <div class="rectangle">
+                        <div class="request-container">
+                            <a href="contact.html">request<br>quote</a>
+                        </div>
+                    </div>
                     <div class="halfCircleRight"><a href="contact.html"></a></div>
                 </div>
             </div>
             <div id="downward-arrow">
-                <a class="go-about-us" href="#about-us-container">&#10094</a>
+                <a class="go-about-us" href="#about-us-container">&#8964</a>
             </div>
             <div id="about-us-container">
-                <h2>About Us</h2>
+                <div>About Us</div>
                 <span class="line"></span>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum fringilla vulputate. 
@@ -71,8 +79,8 @@
                 </p>
             </div>
         </div>
+        <div id="line"></div>
         <footer>
-            <div id="line"></div>
             <div id="contact-info">
                 <div id="name">Jerry Wong</div>
                 <div id="e-mail">planpacificconstruction@gmail.com</div>

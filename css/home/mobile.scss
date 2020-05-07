@@ -14,6 +14,7 @@ body {
     font: 100% $font-stack;
     overflow-x:hidden;
     background-color: $background-color;
+    height:100%;
 }
 
 // top navigation bar 
@@ -58,12 +59,12 @@ header {
             img {
                 display: flex;
                 align-self:center;
-                //width: auto;
+                width: auto;
                 z-index: 99;
                 height: 8vh;
-                min-height: 42px;
-                max-height: 47px;
-                padding-right: 6vw;
+                min-height: 36px;
+                max-height: 40px;
+                padding-right: 5vw;
                 padding-top: 1vh;
                 padding-bottom: 1vh;
                 opacity: 1;
@@ -181,6 +182,7 @@ header {
     }
 
     .prev:hover, .next:hover{
+        border: 2px solid white;
         background-color: rgba(0,0,0,0.9);
     }
     // styling to make dots border-radius for corners
@@ -216,7 +218,8 @@ header {
     #submit{
         margin-top: 15px;
         display:flex;
-        flex-direction:column;
+        flex-direction:row;
+        justify-content: center;
         #submit-button{
             display:flex;
             flex-direction:row;
@@ -229,18 +232,25 @@ header {
                 border-radius: 25px 0 0 25px;
             }
             .rectangle{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
                 width: 150px;
                 height: 50px;
                 border-top: 3px solid $font-color;
                 border-bottom: 3px solid $font-color;
                 text-align:center;
-                a{
-                    text-decoration: none;
-                    color: $font-color;
-                    font-size: 20px;
-                    text-transform: uppercase;
-                    letter-spacing: 3px;
+                .request-container{
+                    padding-top: 5px;
+                    a{
+                        text-decoration: none;
+                        color: $font-color;
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                    }
                 }
+
             }
             .halfCircleRight{
                 width: 25px;
@@ -259,7 +269,7 @@ header {
 }
 
 #downward-arrow{
-    transform: rotate(270deg);
+
     margin-top: 2vh;
     text-align: center;
     a{
@@ -267,7 +277,7 @@ header {
         color: white;
         cursor: pointer;
         font-weight: bold;
-        font-size: 30px;
+        font-size: 38px;
         user-select: none;
     }
 }
@@ -275,7 +285,8 @@ header {
 #about-us-container{
     text-align: center;
     color: $font-color;
-    h2{
+    div{
+        font-weight: 3;
         margin-top: 2vh;
         text-decoration: underline;
         font-size: 19px;
@@ -289,11 +300,11 @@ header {
 
 #line{
     border-top: 1px solid $logo-color;
-    margin-top: 2vh;
+    margin-top: 5vh;
 }
 
 #contact-info{
-    margin:2vh 0 2vh 0;
+    padding: 5vh 0 5vh 0;
     color: $font-color;
     text-align: center;
     font-size: 15px;

@@ -92,16 +92,6 @@ resume = () =>{
   myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
 }
 
-// button hover highlighting
 
-document.getElementByClassName('request-hover').addEventListener("mouseover", overRequest);
-document.getElementsByClassName('request-hover').addEventListener("mouseout", outRequest);
 
-function overRequest(){
-    var x = document.getElementsByClassName('request-hover').length;
-    console.log(x);
-    for (var i = 0; x < i; i++){
-        document.getElementsByClassName('request-hover')[i].style.backgroundColor = "blue";
-    }
-}
 

@@ -1,0 +1,114 @@
+$font-stack: Helvetica, sans-serif;
+$font-color: rgb(233, 233, 233);
+$background-color: rgb(22, 22, 22);
+$logo-color: #ef9629;
+$hover-background: rgb(95, 95, 95);
+
+@media(min-width: 475px){
+    header{
+        .logo-container{
+            padding-top: 5vh;
+            .logo img{
+                width: 75vw;
+                max-width: 500px;
+            }
+            margin-bottom: 5vh;
+        }
+        .head-container{
+            display:none;
+        }
+        .line-desktop{
+            border-top: 1px solid $logo-color;
+        }
+        .menu-container{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .nav{
+                position: relative;
+                width: 100vw;
+                height: 5vh;
+                top: 0;
+                transform: translateX(0%);
+                transition-property: none;
+                ul{
+                    width: 75vw;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    li{
+                        display: in-line;
+                        text-align: center;
+                        opacity: 1;
+                        padding: 0;
+                        width: 25vw;
+                        min-width: 50px;
+                        a:hover{
+                            font-size: 18px;
+                        }
+                        a{
+                            font-size: 17px;
+                            letter-spacing: 4px;
+                            .active{
+                                font-size:19px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .desktop-container{
+        display: flex;
+        flex-direction: row;
+        align-items:start;
+        .carousel-container{
+            justify-content: center;
+            padding: 0 2vw 0 2vw;
+            .slideshow-container{
+                width: 70vw;
+                margin-top: 5vw;
+               .next, .prev{
+                    padding: 8px;
+                    //max-width: 40px;
+                    //max-height: 40px;
+                }
+            }
+        }
+        #about-us-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 28vw;
+            margin-top: 5vw;
+            div{
+                margin-top: 0;
+                font-weight: 6;
+                font-size: 22px;
+                letter-spacing: 3px;
+            }
+            p{
+                padding: 0 2vw 0 2vw;
+                font-size: 15px;
+                letter-spacing: 1px;
+            }
+        }
+
+    }
+    #submit{
+        display:none;
+    }
+
+    #downward-arrow{
+        display:none;
+    }
+
+    #contact-info{
+        margin: 0;
+        padding-top: 2vh;
+    }
+
+}
