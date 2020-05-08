@@ -92,7 +92,7 @@
     padding: 0 2vw 0 2vw;
   }
   .desktop-container .carousel-container .slideshow-container {
-    width: 70vw;
+    width: 65vw;
     margin-top: 5vw;
   }
   .desktop-container .carousel-container .slideshow-container .next, .desktop-container .carousel-container .slideshow-container .prev {
@@ -109,8 +109,8 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 28vw;
-    margin-top: 5vw;
+    width: 30vw;
+    margin-top: 4vw;
   }
   .desktop-container #about-us-container div {
     margin-top: 0;

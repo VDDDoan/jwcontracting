@@ -326,7 +326,7 @@ header .menu-container .nav-active {
 
 #submit #submit-button .halfCircleLeft {
   width: 25px;
-  height: 50px;
+  height: 45px;
   border: 3px solid #e9e9e9;
   border-right: none;
   border-radius: 25px 0 0 25px;
@@ -343,28 +343,28 @@ header .menu-container .nav-active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 150px;
-  height: 50px;
+  width: 145px;
+  height: 45px;
   border-top: 3px solid #e9e9e9;
   border-bottom: 3px solid #e9e9e9;
   text-align: center;
 }
 
 #submit #submit-button .rectangle .request-container {
-  padding-top: 5px;
+  padding-top: 2px;
 }
 
 #submit #submit-button .rectangle .request-container a {
   text-decoration: none;
   color: #e9e9e9;
-  font-size: 16px;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
 
 #submit #submit-button .halfCircleRight {
   width: 25px;
-  height: 50px;
+  height: 45px;
   border: 3px solid #e9e9e9;
   border-left: none;
   border-radius: 0 25px 25px 0;
@@ -376,7 +376,7 @@ header .menu-container .nav-active {
 }
 
 #downward-arrow {
-  margin-top: 2vh;
+  margin-top: 1vh;
   text-align: center;
 }
 
