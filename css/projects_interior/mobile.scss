@@ -1,0 +1,138 @@
+$font-stack: Helvetica, sans-serif;
+$font-color: rgb(233, 233, 233);
+$background-color: rgb(22, 22, 22);
+$logo-color: #ef9629;
+$hover-background: rgb(95, 95, 95);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 100% $font-stack;
+    overflow-x:hidden;
+    background-color: $background-color;
+    height:100%;
+}
+
+// top navigation bar 
+
+header {
+    display: block;
+    width: 100%;
+    background-color: $background-color;
+// Logo styling     
+    .logo-container{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 11vh;
+        margin-bottom: 15px;
+        .logo img{
+            width: 90vw;
+            align-self:center;
+        }
+    }
+// Hamburger menu styling 
+    .head-container{
+        display: flex;
+        position:fixed;
+        z-index: 98;
+        width: 100vw;
+        height: 10vh;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: right;
+        background-color: $background-color;
+        opacity: 0.95;
+        #hamburger-menu{
+            display:flex;
+            margin: 0;
+            padding: 0;
+            background-color: $background-color;
+            align-self: center;
+            justify-content: flex-end;
+            height: 10vh;
+            img {
+                display: flex;
+                align-self:center;
+                width: auto;
+                z-index: 99;
+                height: 8vh;
+                min-height: 36px;
+                max-height: 40px;
+                padding-right: 5vw;
+                padding-top: 1vh;
+                padding-bottom: 1vh;
+                opacity: 1;
+
+            }
+        }
+    }
+// menu styling and animations
+    .menu-container{
+        display:flex;
+        flex-direction:row;
+        justify-content: flex-end;
+        // menu styling when hamburger button is pressed
+        .nav{
+            position: absolute;
+            z-index: 100;
+            position: fixed;
+            display:flex;
+            height: 90vh;
+            width: 75vw;
+            top: 10vh;
+            align-items:center;
+            justify-content: space-around;
+            background-color: $background-color;
+            opacity: 0.95;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in;
+            ul{
+                li{
+                    opacity: 0;
+                    a:hover{
+                        font-size: 15px;
+                        font-weight:bold;
+                    }
+                    list-style: none;
+                    padding: 10vh 0 10vh 0;
+                    }
+                    a{
+                        color: $font-color;
+                        text-decoration: none;
+                        letter-spacing: 3px;
+                        font-size: 14px;
+                        .active{
+                            font-size: 16px;
+                            font-weight: bold;
+                            text-decoration: underline;
+                            color: $logo-color;
+                            background-color:$background-color;
+                    }
+                }
+            }
+    
+        }
+        .nav-active{
+            transform: translateX(0%)
+        }
+
+        @keyframes navLinkFade{
+            from{
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+
+}

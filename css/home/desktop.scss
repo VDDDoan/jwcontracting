@@ -67,9 +67,9 @@ $hover-background: rgb(95, 95, 95);
         align-items:start;
         .carousel-container{
             justify-content: center;
-            padding: 0 2vw 0 2vw;
+            padding: 0 2vw 0 4vw;
             .slideshow-container{
-                width: 65vw;
+                width: 60vw;
                 margin-top: 5vw;
                .next, .prev{
                     padding: 8px;
@@ -91,7 +91,7 @@ $hover-background: rgb(95, 95, 95);
                 letter-spacing: 3px;
             }
             p{
-                padding: 0 2vw 0 2vw;
+                padding: 0 5vw 0 2vw;
                 font-size: 15px;
                 letter-spacing: 1px;
             }
