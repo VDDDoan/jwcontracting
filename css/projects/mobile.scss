@@ -137,6 +137,94 @@ header {
 
 }
 
+#link-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #interior-container, #exterior-container{
+        position: relative;
+        text-align: center;
+        a{
+            img{
+                width: 90vw;
+                height: 40vh;
+                opacity: 0.65;
+            }
+            .text{
+                text-decoration: none;
+                letter-spacing: 1px;
+                color: $font-color;
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }    
+        }
+        a:hover{
+            img{
+                opacity: 0.5;
+            }    
+            .text{
+                letter-spacing: 2px;
+                font-size: 24px;
+                color: white;
+            }
+        }        
+    }
+
+}
+
+
+    // submit quote
+
+#submit{
+    margin-top: 5vh;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    #submit-button{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        .halfCircleLeft{
+            width: 25px;
+            height: 45px;
+            border: 3px solid $font-color;
+            border-right: none;
+            border-radius: 25px 0 0 25px;
+        }
+        .rectangle{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            width: 145px;
+            height: 45px;
+            border-top: 3px solid $font-color;
+            border-bottom: 3px solid $font-color;
+            text-align:center;
+            .request-container{
+                padding-top: 2px;
+                a{
+                    text-decoration: none;
+                    color: $font-color;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                }
+            }
+
+        }
+        .halfCircleRight{
+            width: 25px;
+            height: 45px;
+            border: 3px solid $font-color;
+            border-left: none;
+            border-radius: 0 25px 25px 0;            
+        }
+    }
+
+}
 
 //footer
 #line{
