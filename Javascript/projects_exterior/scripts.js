@@ -20,3 +20,129 @@ const navSlide = () => {
 }
 
 navSlide();
+
+// before and after buttons to change class and change image src for each image
+// this will cycle through for the lightbox as well
+
+var before1 = document.getElementsByClassName("before-button1");
+var after1 = document.getElementsByClassName("after-button1");
+var before2 = document.getElementsByClassName("before-button2");
+var after2 = document.getElementsByClassName("after-button2");
+
+// functions for before button on images  
+
+var function1 = function(){
+    var element = document.getElementsByClassName("before-button1");
+    for (var i = 0; i < element.length; i++)
+    {
+        element[i].classList.add("active-button");
+    }
+    var element_after = document.getElementsByClassName("after-button1");
+    for (var i = 0; i < element_after.length; i++)
+    {
+        element_after[i].classList.remove("active-button");
+    }
+    var element_img = document.getElementsByClassName("image1");
+    for (var i = 0; i < element_img.length; i++)
+    {
+        element_img[i].src="images/projects/projects_exterior/Deck.jpg";
+    }    
+}
+var function2 = function(){
+    var element = document.getElementsByClassName("after-button1");
+    for (var i = 0; i < element.length; i++)
+    {
+        element[i].classList.add("active-button");
+    }
+    var element_after = document.getElementsByClassName("before-button1");
+    for (var i = 0; i < element_after.length; i++)
+    {
+        element_after[i].classList.remove("active-button");
+    }
+    var element_img = document.getElementsByClassName("image1");
+    for (var i = 0; i < element_img.length; i++)
+    {
+        element_img[i].src="images/projects/projects_exterior/exterior-finishing.jpg";
+    }
+    
+}
+var function3 = function(){
+    var element = document.getElementsByClassName("before-button2");
+    for (var i = 0; i < element.length; i++)
+    {
+        element[i].classList.add("active-button");
+    }
+    var element_after = document.getElementsByClassName("after-button2");
+    for (var i = 0; i < element_after.length; i++)
+    {
+        element_after[i].classList.remove("active-button");
+    }
+    var element_img = document.getElementsByClassName("image2");
+    for (var i = 0; i < element_img.length; i++)
+    {
+        element_img[i].src="images/projects/projects_exterior/stairs1.jpg";
+    }
+    
+}
+var function4 = function(){
+    var element = document.getElementsByClassName("after-button2");
+    for (var i = 0; i < element.length; i++)
+    {
+        element[i].classList.add("active-button");
+    }
+    var element_after = document.getElementsByClassName("before-button2");
+    for (var i = 0; i < element_after.length; i++)
+    {
+        element_after[i].classList.remove("active-button");
+    }
+    var element_img = document.getElementsByClassName("image2");
+    for (var i = 0; i < element_img.length; i++)
+    {
+        element_img[i].src="images/projects/projects_exterior/stairs2.jpg";
+    }
+    
+}
+
+for(var i = 0; i < before1.length; i++)
+{
+    before1[i].addEventListener('click', function1);
+    after1[i].addEventListener('click', function2);
+    before2[i].addEventListener('click', function3);
+    after2[i].addEventListener('click', function4);
+}
+
+//lightbox 
+
+function openModal(){
+    document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal(){
+    document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n){
+    showSlides(slideIndex += n)
+}
+
+function currentSlide(n){
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length){
+        slideIndex = 1;
+    }
+    if (n < 1){
+        slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++){
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+}

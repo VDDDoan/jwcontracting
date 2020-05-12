@@ -1,0 +1,39 @@
+@media (orientation: landscape) and (max-height: 450px) {
+    header{
+        .logo-container{
+            .logo img{
+                height: 23vh;
+                width: auto;
+            }
+        }
+        .head-container{
+            height: 10vh;
+            #hamburger-menu{
+                height: 8vh;
+                img{
+                    height: 6vh;
+                    max-height: 32px;
+                    min-height: 30px;
+                    padding-top: 2vh;
+                }
+            }
+        }
+        .menu-container{
+            .nav{
+                width: 100vw;
+            }
+        }
+    }
+    #link-container{
+        flex-direction: row;
+        justify-content: center;
+        #interior-container, #exterior-container{
+            a{
+                img{
+                    width:45vw;
+                    height:60vh;
+                }
+            }
+        }
+    }
+}

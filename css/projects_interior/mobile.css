@@ -206,9 +206,6 @@ header .menu-container .nav-active {
 }
 
 .row .column {
-  /*display: flex;
-        flex-direction: column;
-        align-items: center;*/
   position: relative;
 }
 

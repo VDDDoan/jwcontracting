@@ -31,7 +31,62 @@
             </div>
             <div class="line-desktop"></div>
         </header>
-
+        <div class="row">
+            <div class="column">
+                <img class="image1 hover-shadow" src="images/projects/projects_exterior/Deck.jpg" onclick="openModal();currentSlide(1)">
+                <div class="center_button">
+                    <div class="button-container">
+                        <button class="before-button1 active-button">Before</button>
+                        <button class="after-button1">After</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <img class="image2 hover-shadow" src="images/projects/projects_exterior/stairs1.jpg" onclick="openModal();currentSlide(2)">
+                <div class="center_button">
+                    <div class="button-container">
+                        <button class="before-button2 active-button">Before</button>
+                        <button class="after-button2">After</button>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <div id="myModal" class="modal">
+            <a class="close cursor" onclick="closeModal()"style ="z-index:102">&times;</a>
+            <div class="modal-content">
+                <div class="mySlides"> <!--put button for before and after inside here-->
+                    <img class="image1" src="images/projects/projects_exterior/Deck.jpg">
+                    <div class="center_button_modal">
+                        <div class="button-container">
+                            <button class="before-button1 active-button">Before</button>
+                            <button class="after-button1">After</button>
+                        </div>
+                    </div>                   
+                </div>
+                <div class="mySlides">
+                    <img class="image2" src="image2 hover-shadow" src="images/projects/projects_exterior/stairs1.jpg">
+                    <div class="center_button_modal">
+                        <div class="button-container">
+                            <button class="before-button2 active-button">Before</button>
+                            <button class="after-button2">After</button>
+                        </div>
+                    </div>                      
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+                <a class="next" onclick="plusSlides(+1)">&#10095</a>
+            </div>
+        </div>       
+        <div id="submit">
+            <div id="submit-button">
+                <div class="halfCircleLeft" onmouse><a href="contact.html"></a></div>
+                <div class="rectangle">
+                    <div class="request-container">
+                        <a href="contact.html">request<br>quote</a>
+                    </div>
+                </div>
+                <div class="halfCircleRight"><a href="contact.html"></a></div>
+            </div>
+        </div>
         <div id="line"></div>
         <footer>
             <div id="contact-info">

@@ -21,7 +21,7 @@ const navSlide = () => {
 
 navSlide();
 
-// slideshow carousel script to 
+// slideshow carousel script 
 var slideIndex = 1;
 
 var myTimer;
@@ -32,14 +32,6 @@ window.addEventListener("load",function() {
     showSlides(slideIndex);
     myTimer = setInterval(function(){plusSlides(1)}, 4000);
   
-    //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-    slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
-  
-    //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-    // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
-  
-    slideshowContainer.addEventListener('mouseenter', pause)
-    slideshowContainer.addEventListener('mouseleave', resume)
 })
 
 // NEXT AND PREVIOUS CONTROL
@@ -83,14 +75,6 @@ function showSlides(n){
   dots[slideIndex-1].className += " active";
 }
 
-pause = () => {
-  clearInterval(myTimer);
-}
-
-resume = () =>{
-  clearInterval(myTimer);
-  myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
-}
 
 
 

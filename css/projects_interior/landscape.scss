@@ -1,0 +1,50 @@
+@media (orientation: landscape) and (max-height: 450px) {
+    header{
+        .logo-container{
+            .logo img{
+                height: 23vh;
+                width: auto;
+            }
+        }
+        .head-container{
+            height: 10vh;
+            #hamburger-menu{
+                height: 8vh;
+                img{
+                    height: 6vh;
+                    max-height: 32px;
+                    min-height: 30px;
+                    padding-top: 2vh;
+                }
+            }
+        }
+        .menu-container{
+            .nav{
+                width: 100vw;
+            }
+        }
+    }
+
+    .row{
+        .column{
+            img{
+                height:80vh;
+                width: 80vw;
+            }
+        }
+    }
+    .center_button{
+        width: 80vw;
+        height: 80vh;
+    }
+
+    .modal{
+        img{
+            height: 90vh;
+            width: 70vw;
+            margin-left:10vw;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
+        }
+    }
+}
