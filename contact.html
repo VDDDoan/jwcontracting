@@ -31,8 +31,62 @@
             </div>
             <div class="line-desktop"></div>
         </header>
-
-        <div id="line"></div>
+        <div class="line"></div>
+        <div id="contact-container">
+            <form id="contact-form">
+                <fieldset>
+                    <legend><h2>Contact</h2></legend>
+                    <div class="input-field">
+                        <label for="name-input">Name</label><br>
+                        <input type="text" id="name-input" name="name-input" placeholder="Enter your name" class="form-control" required><br>
+                    </div>
+                    <div class="input-field">
+                        <label for="email-input">E-mail</label><br>
+                        <input type="text" id="email-input" name="email-input" placeholder="Enter your e-mail" class="form-control" required><br>
+                    </div>
+                    <div class="input-field">
+                        <label for="phone-input">Phone Number</label><br>
+                        <input type="text" id="phone-input" name="phone-input" placeholder="Enter your phone number" class="form-control" required><br>
+                    </div>
+                    <div class="input-field">
+                        <label for="address-input">Address</label><br>
+                        <input type="text" id="address-input" name="address-input" placeholder="123 Main St." class="form-control" required><br>
+                    </div>
+                    <div class="dropdown-field">
+                        <label for="project-input">Project type</label><br>
+                        <select id="project-input" name="project-input" required>
+                            <option value="" disabled selected hidden class="placeholder">Choose project type</option>
+                            <option value="Renovation">Renovation</option>
+                            <option value="Addition">Addition</option>
+                            <option value="Kitchen">Kitchen</option>
+                            <option value="Bathroom">Bathroom</option>
+                            <option value="Other">Other (Please indicate in message)</option>
+                        </select>
+                    </div>
+                    <div class="dropdown-field">
+                        <label for="budget-input">Budget</label><br>
+                        <select id="budget-input" name="budget-input" required>
+                            <option value="" selected hidden class="placeholder">Choose budget</option>
+                            <option value="$5000">Under $5000</option>
+                            <option value="$10000">$5000-$10000</option>
+                            <option value="$50000">$10000-$50000</option>
+                            <option value="$100000">$50000-$100000</option>
+                            <option value="+$100000">Over $100000</option>
+                        </select>
+                    </div>
+                    <div class="message-field">
+                        <label for="description-input">Message</label><br>
+                        <textarea name="description-input" id="description-input" placeholder="Additional Information"></textarea>
+                    </div>
+                </fieldset>
+                <div class="center-button">
+                    <div class="button-container">
+                        <button type="button" class="button">Submit</button>
+                    </div>     
+                </div>          
+            </form>
+        </div>
+        <div class="line"></div>
         <footer>
             <div id="contact-info">
                 <div id="name">Jerry Wong</div>

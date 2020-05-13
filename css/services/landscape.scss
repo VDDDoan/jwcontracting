@@ -2,16 +2,17 @@
     header{
         .logo-container{
             .logo img{
-                height: 23vh;
+                height: 30vh;
                 width: auto;
+                padding-top:5vh;
             }
         }
         .head-container{
-            height: 10vh;
+            height: 15vh;
             #hamburger-menu{
                 height: 8vh;
                 img{
-                    height: 6vh;
+                    height: 10vh;
                     max-height: 32px;
                     min-height: 30px;
                     padding-top: 2vh;

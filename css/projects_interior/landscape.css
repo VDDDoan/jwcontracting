@@ -1,16 +1,17 @@
 @media (orientation: landscape) and (max-height: 450px) {
   header .logo-container .logo img {
-    height: 23vh;
+    height: 30vh;
     width: auto;
+    padding-top: 5vh;
   }
   header .head-container {
-    height: 10vh;
+    height: 15vh;
   }
   header .head-container #hamburger-menu {
     height: 8vh;
   }
   header .head-container #hamburger-menu img {
-    height: 6vh;
+    height: 10vh;
     max-height: 32px;
     min-height: 30px;
     padding-top: 2vh;

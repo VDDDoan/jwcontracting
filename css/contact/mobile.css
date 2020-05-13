@@ -192,7 +192,120 @@ header .menu-container .nav-active {
   }
 }
 
-#line {
+legend {
+  text-align: center;
+}
+
+legend h2 {
+  color: #e9e9e9;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+fieldset {
+  width: 90vw;
+  margin: 5vw 0 0 5vw;
+}
+
+fieldset .input-field, fieldset .dropdown-field, fieldset .message-field {
+  width: 80vw;
+  margin: 4vh 0 0 5vw;
+}
+
+fieldset label {
+  color: #e9e9e9;
+  margin-top: 2vh;
+}
+
+fieldset input {
+  width: 80vw;
+  border-radius: 5px;
+}
+
+fieldset textarea {
+  width: 80vw;
+  height: 20vh;
+}
+
+fieldset .message-field {
+  margin-bottom: 5vh;
+}
+
+fieldset select {
+  background-color: #e9e9e9;
+  width: 80vw;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+fieldset select option {
+  width: 80vw;
+}
+
+fieldset select:invalid,
+fieldset select option[value=""] {
+  color: #999999;
+}
+
+fieldset ::-webkit-input-placeholder {
+  color: grey;
+}
+
+fieldset :-ms-input-placeholder {
+  color: grey;
+}
+
+fieldset ::-ms-input-placeholder {
+  color: grey;
+}
+
+fieldset ::placeholder {
+  color: grey;
+}
+
+.center-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5vh;
+}
+
+.center-button .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #e9e9e9;
+  width: 150px;
+  height: 25px;
+  border-radius: 25px;
+}
+
+.center-button .button-container button {
+  color: #e9e9e9;
+  font-size: 18px;
+  letter-spacing: 5px;
+}
+
+.line {
   border-top: 1px solid #ef9629;
   margin-top: 5vh;
 }

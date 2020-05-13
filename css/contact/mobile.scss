@@ -137,10 +137,86 @@ header {
 
 }
 
+legend{
+    text-align: center;
+    h2{
+        color: $font-color;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 3px;
+    }
+}
+
+
+fieldset{
+    width: 90vw;
+    margin: 5vw 0 0 5vw;
+    .input-field, .dropdown-field, .message-field{
+        width: 80vw;
+        margin: 4vh 0 0 5vw;
+    }
+    label{
+        color:$font-color;
+        margin-top: 2vh;
+    }
+    input{
+        width: 80vw;
+        border-radius: 5px;
+    }
+    textarea{
+        width: 80vw;
+        height: 20vh;
+    }
+    .message-field{
+        margin-bottom: 5vh;
+    }
+
+    select{
+        //border: 2px solid $font-color;
+        //color: $font-color;
+        background-color: $font-color;
+        width: 80vw;
+        border-radius: 5px;
+        display: inline-block;
+        option{
+            width:80vw;
+        }
+    }
+    select:invalid,
+    select option[value=""] {
+      color: #999999;
+    }
+    ::placeholder{
+        color: grey;
+    }
+}
+
+.center-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5vh;
+    .button-container{
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $font-color;
+        width: 150px;
+        height: 25px;
+        border-radius: 25px;
+        button{
+            color: $font-color;
+            font-size: 18px;
+            letter-spacing: 5px;
+        }
+    }
+}
 
 
 // footer
-#line{
+.line{
     border-top: 1px solid $logo-color;
     margin-top: 5vh;
 }
@@ -151,7 +227,6 @@ footer{
     justify-content: center;
     #contact-info{
         padding: 4vh 0 2vh 0;
-        // margin-bottom: 5vh;
         color: $font-color;
         text-align: center;
         font-size: 15px;
