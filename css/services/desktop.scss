@@ -4,7 +4,7 @@ $background-color: rgb(22, 22, 22);
 $logo-color: #ef9629;
 $hover-background: rgb(95, 95, 95);
 
-@media(min-width: 475px) and (min-height:500px){
+@media (min-width: 450px) and (min-height: 500px){
     header{
         .logo-container{
             padding-top: 5vh;
@@ -47,10 +47,10 @@ $hover-background: rgb(95, 95, 95);
                         width: 25vw;
                         min-width: 50px;
                         a:hover{
-                            font-size: 18px;
+                            font-size: 22px;
                         }
                         a{
-                            font-size: 17px;
+                            font-size: 20px;
                             letter-spacing: 4px;
                             .active{
                                 font-size:19px;
@@ -61,54 +61,59 @@ $hover-background: rgb(95, 95, 95);
             }
         }
     }
-    .desktop-container{
-        display: flex;
+
+    .desktop-line{
+        margin-top: 10px;
+    }
+
+    h3{
+        font-size: 24px;
+    }
+
+    .container.left, .container.right{
         flex-direction: row;
-        align-items:start;
+        width: 90vw;
+        margin: 2vh 0 0 0;
+        p{
+            width: 40vw;
+            font-size: 20px;
+            padding: 0 2vw 0 2vw;
+        }
         .carousel-container{
-            justify-content: center;
-            padding: 0 2vw 0 4vw;
-            .slideshow-container{
-                width: 60vw;
-                margin-top: 5vw;
-               .next, .prev{
-                    padding: 8px;
-                    //max-width: 40px;
-                    //max-height: 40px;
-                }
-            }
+            margin: 0;
+            padding: 0;
         }
-        #about-us-container{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 30vw;
-            margin-top: 4vw;
-            div{
-                margin-top: 0;
-                font-weight: 6;
-                font-size: 22px;
-                letter-spacing: 3px;
-            }
-            p{
-                //padding: 0 5vw 0 2vw;
-                font-size: 15px;
-                letter-spacing: 1px;
-            }
+    }   
+
+    .container.left{
+        .carousel-container{
+            padding-left: 5vw;
         }
-
-    }
-    #submit{
-        display:none;
-    }
-
-    #downward-arrow{
-        display:none;
+        p{
+            padding-left: 5vw;
+        }
     }
 
-    #contact-info{
-        margin: 0;
-        padding-top: 2vh;
+    .container.right{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        width: 100vw;
+        padding-left: 5vw;
+        p{
+            padding-right: 5vw;
+        }
     }
 
+    .carousel-container{
+        .slideshow-container{
+            width: 50vw;
+        }
+    }
+
+    .prev, .next{
+        top: 35%;
+        font-size: 20px;
+        padding: 5vw;
+    }
 }

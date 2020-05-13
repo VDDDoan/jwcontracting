@@ -1,5 +1,5 @@
 $font-stack: Helvetica, sans-serif;
-$font-color: rgb(233, 233, 233);
+$font-color: rgb(224, 224, 224);
 $background-color: rgb(22, 22, 22);
 $logo-color: #ef9629;
 $hover-background: rgb(95, 95, 95);
@@ -211,6 +211,37 @@ header {
         from{opacity: .4}
         to{opacity: 1}
     }
+
+h3{
+    font-size: 18px
+}
+
+h3{
+    color: $font-color;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+.line{
+    width: 90vw;
+    border: 1px solid $logo-color;
+}
+
+.container-title, .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vh 0 2vh 0;
+    p{
+        width: 90vw;
+        text-align: center;
+        color: $font-color;
+        font-size: 16px;
+    }
+}
+
+
 //submit quote
 
 #submit{

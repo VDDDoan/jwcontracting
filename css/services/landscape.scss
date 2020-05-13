@@ -1,0 +1,65 @@
+@media (orientation: landscape) and (max-height: 450px){
+    header{
+        .logo-container{
+            .logo img{
+                height: 23vh;
+                width: auto;
+            }
+        }
+        .head-container{
+            height: 10vh;
+            #hamburger-menu{
+                height: 8vh;
+                img{
+                    height: 6vh;
+                    max-height: 32px;
+                    min-height: 30px;
+                    padding-top: 2vh;
+                }
+            }
+        }
+        .menu-container{
+            .nav{
+                width: 100vw;
+            }
+        }
+    }
+
+    .container.left, .container.right{
+        flex-direction: row;
+        height: 70vh;
+        p{
+            width: 30vw;
+            font-size: 14px;
+        }
+        .carousel-container{
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .container.left{
+        .carousel-container{
+            margin-left: 2vw;
+        }
+    }
+
+    .container.right{
+        flex-direction: row-reverse;
+        .carousel-container{
+            margin-right: 2vw;
+        }
+    }
+
+    .carousel-container{
+        .slideshow-container{
+            width: 60vw;
+        }
+    }
+
+    .prev, .next{
+        top: 30%;
+        font-size: 20px;
+        padding: 5vh;
+    }
+}

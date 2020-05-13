@@ -253,7 +253,7 @@ header {
     position: absolute;
     top: 40%;
     width: auto;
-    padding: 5vw;
+    padding: 15px;
     color: white;
     font-weight: bold;
     font-size: 38px;
@@ -268,7 +268,7 @@ header {
 }
 
 .prev:hover, .next:hover{
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #submit{
