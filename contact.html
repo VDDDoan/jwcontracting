@@ -54,25 +54,31 @@
                     </div>
                     <div class="dropdown-field">
                         <label for="project-input">Project type</label><br>
-                        <select id="project-input" name="project-input" required>
-                            <option value="" disabled selected hidden class="placeholder">Choose project type</option>
-                            <option value="Renovation">Renovation</option>
-                            <option value="Addition">Addition</option>
-                            <option value="Kitchen">Kitchen</option>
-                            <option value="Bathroom">Bathroom</option>
-                            <option value="Other">Other (Please indicate in message)</option>
-                        </select>
+                        <div class="select-container">
+                            <select id="project-input" name="project-input" required>
+                                <option value="" disabled selected hidden class="placeholder">Choose project type</option>
+                                <option value="Renovation">Renovation</option>
+                                <option value="Addition">Addition</option>
+                                <option value="Kitchen">Kitchen</option>
+                                <option value="Bathroom">Bathroom</option>
+                                <option value="Other">Other (Please indicate in message)</option>
+                            </select>
+                            <img class="arrow" src="images/icons/down-arrow@2x.png">
+                        </div>
                     </div>
                     <div class="dropdown-field">
                         <label for="budget-input">Budget</label><br>
-                        <select id="budget-input" name="budget-input" required>
-                            <option value="" selected hidden class="placeholder">Choose budget</option>
-                            <option value="$5000">Under $5000</option>
-                            <option value="$10000">$5000-$10000</option>
-                            <option value="$50000">$10000-$50000</option>
-                            <option value="$100000">$50000-$100000</option>
-                            <option value="+$100000">Over $100000</option>
-                        </select>
+                        <div class="select-container">
+                            <select id="budget-input" name="budget-input" required>
+                                <option value="" selected hidden class="placeholder">Choose budget</option>
+                                <option value="$5000">Under $5000</option>
+                                <option value="$10000">$5000-$10000</option>
+                                <option value="$50000">$10000-$50000</option>
+                                <option value="$100000">$50000-$100000</option>
+                                <option value="+$100000">Over $100000</option>
+                            </select>
+                            <img class="arrow" src="images/icons/down-arrow@2x.png">
+                        </div>
                     </div>
                     <div class="message-field">
                         <label for="description-input">Message</label><br>

@@ -159,35 +159,64 @@ fieldset{
         color:$font-color;
         margin-top: 2vh;
     }
-    input{
+    input, .select-container{
         width: 80vw;
         border-radius: 5px;
+        min-height: 30px;
+        max-height: 40px;
+        height: 10vh;
+        border: 2px solid $font-color;
+        background-color:transparent;
+        color: $font-color;
+        padding: 0 0 0 0.75rem;
     }
+    .select-container{
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 0;
+        img{
+            position: absolute;
+            right: 10vw;
+            height: 5vh;
+            min-height: 15px;
+            max-height: 20px;
+        }
+    }
+    select{
+        width: 100vw;
+        min-height: 30px;
+        max-height: 40px;
+        height: 10vh;
+        background-color:transparent;
+        color: $font-color;
+        padding: 0 0 0 0.75rem;
+        position: relative;
+        appearance: none;
+    }
+
     textarea{
         width: 80vw;
         height: 20vh;
+        min-height: 150px;
+        max-height: 300px;
+        color: $font-color;
+        background-color: transparent;
+        padding: 0.75rem 0 0 1rem;
+        border: 2px solid $font-color;
     }
     .message-field{
         margin-bottom: 5vh;
     }
 
-    select{
-        //border: 2px solid $font-color;
-        //color: $font-color;
-        background-color: $font-color;
-        width: 80vw;
-        border-radius: 5px;
-        display: inline-block;
-        option{
-            width:80vw;
-        }
-    }
     select:invalid,
     select option[value=""] {
       color: #999999;
     }
     ::placeholder{
         color: grey;
+    }
+    input:focus, select:focus, textarea:focus{
+        background: rgba(239, 199, 41, 0.15);
     }
 }
 
@@ -202,14 +231,15 @@ fieldset{
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        border: 2px solid $font-color;
-        width: 150px;
-        height: 25px;
-        border-radius: 25px;
         button{
             color: $font-color;
             font-size: 18px;
             letter-spacing: 5px;
+            background-color: $background-color;
+            border: 2px solid $font-color;
+            width: 150px;
+            height: 25px;
+            border-radius: 25px;
         }
     }
 }
