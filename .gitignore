@@ -1,2 +1,5 @@
 #ignore OS system files
 .DS_Store
+
+#ignore Design files
+Design/
