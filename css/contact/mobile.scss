@@ -264,17 +264,18 @@ fieldset{
         background: rgba(239, 199, 41, 0.1);
     }
 }
-
-@-webkit-keyframes autofill{
+@keyframes autofill{
     0%, 100%{
         color:$font-color;
         background:transparent;
     }
 }
-input:-webkit-autofill{
-    -webkit-animation-name: autofill;
-    -webkit-animation-fill-mode: both;
+
+input:autofill{
+    animation-name: autofill;
+    animation-fill-mode: both;
 }
+
 
 .center-button{
     display: flex;
