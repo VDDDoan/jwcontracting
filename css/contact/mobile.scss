@@ -178,27 +178,67 @@ fieldset{
         display: flex;
         align-items: center;
         padding: 0 0 0 0;
-
-        img{
-            position: absolute;
-            right: 11vw;
-            height: 5vh;
-            min-height: 15px;
-            max-height: 20px;
-            pointer-events: none;
+        position: relative;
+        border: none;
+        select{
+            width: 100vw;
+            min-height: 30px;
+            max-height: 40px;
+            height: 10vh;
+            background-color:transparent;
+            color: $font-color;
+            padding: 0 0 0 0.75rem;
+            position: relative;
+            appearance: none;
+            font-size: $font-size;
+            display: none;
         }
     }
-    select{
-        width: 100vw;
-        min-height: 30px;
-        max-height: 40px;
-        height: 10vh;
-        background-color:transparent;
+    .select-selected{
+        background-color: $background-color;
+    }
+    .select-selected:after{
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #fff transparent transparent transparent;
+    }
+
+    .select-selected.select-arrow-active:after{
+        border-color: transparent transparent #fff transparent;
+        top: 7px;
+    }
+
+    .select-items div, .select-selected{
         color: $font-color;
-        padding: 0 0 0 0.75rem;
-        position: relative;
-        appearance: none;
-        font-size: $font-size;
+        padding: 8px 16px;
+        border: 2px solid $font-color;
+        border-radius: 5px;
+        width: 100%;
+        //border-color: transparent transparent rgba(0,0,0,0.1) transparent;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .select-items{
+        position: absolute;
+        background-color: $background-color;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+    }
+
+    .select-hide{
+        display: none;
+    }
+
+    .select-items div:hover, .same-as-selected{
+        background: rgba(239, 199, 41, 0.1);
     }
 
     textarea{
@@ -217,16 +257,23 @@ fieldset{
         margin-bottom: 5vh;
     }
 
-    select:invalid,
-    select option[value=""] {
-      color: #999999;
-    }
     ::placeholder{
         color: grey;
     }
     input:focus, select:focus, textarea:focus{
-        background: rgba(239, 199, 41, 0.05);
+        background: rgba(239, 199, 41, 0.1);
     }
+}
+
+@-webkit-keyframes autofill{
+    0%, 100%{
+        color:$font-color;
+        background:transparent;
+    }
+}
+input:-webkit-autofill{
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
 }
 
 .center-button{

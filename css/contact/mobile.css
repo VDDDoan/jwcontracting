@@ -240,18 +240,11 @@ fieldset .select-container {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 0 0 0;
+  position: relative;
+  border: none;
 }
 
-fieldset .select-container img {
-  position: absolute;
-  right: 11vw;
-  height: 5vh;
-  min-height: 15px;
-  max-height: 20px;
-  pointer-events: none;
-}
-
-fieldset select {
+fieldset .select-container select {
   width: 100vw;
   min-height: 30px;
   max-height: 40px;
@@ -264,6 +257,57 @@ fieldset select {
      -moz-appearance: none;
           appearance: none;
   font-size: 20px;
+  display: none;
+}
+
+fieldset .select-selected {
+  background-color: #161616;
+}
+
+fieldset .select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+fieldset .select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+fieldset .select-items div, fieldset .select-selected {
+  color: #e9e9e9;
+  padding: 8px 16px;
+  border: 2px solid #e9e9e9;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+fieldset .select-items {
+  position: absolute;
+  background-color: #161616;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+fieldset .select-hide {
+  display: none;
+}
+
+fieldset .select-items div:hover, fieldset .same-as-selected {
+  background: rgba(239, 199, 41, 0.1);
 }
 
 fieldset textarea {
@@ -283,11 +327,6 @@ fieldset .message-field {
   margin-bottom: 5vh;
 }
 
-fieldset select:invalid,
-fieldset select option[value=""] {
-  color: #999999;
-}
-
 fieldset ::-webkit-input-placeholder {
   color: grey;
 }
@@ -305,7 +344,19 @@ fieldset ::placeholder {
 }
 
 fieldset input:focus, fieldset select:focus, fieldset textarea:focus {
-  background: rgba(239, 199, 41, 0.05);
+  background: rgba(239, 199, 41, 0.1);
+}
+
+@-webkit-keyframes autofill {
+  0%, 100% {
+    color: #e9e9e9;
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
 }
 
 .center-button {
