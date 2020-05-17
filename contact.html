@@ -3,7 +3,13 @@
     <head>
         <title>Plan Pacific Construction | Contact</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/png" href="images/flavicon/PPC_Favicon_Orange.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/flavicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/flavicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/flavicon/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="theme-color" content="#ffffff">
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/contact/mobile.css">
         <link rel="stylesheet" href="css/contact/landscape.css">
@@ -16,7 +22,7 @@
                 <div id="hamburger-menu"><img src="images/icons/Hamburger-Menu.png" id="menu"></div>
             </div>
             <div class = "logo-container">
-                <div class="logo"><img src="images/logo/PPC_Alternate_White_Orange.png"></div>
+                <a href=index.html><div class="logo"><img src="images/logo/PPC_Alternate_White_Orange.png"></div></a>
             </div>
             <div class="line-desktop"></div>
             <div class ="menu-container">
@@ -53,7 +59,7 @@
                         <input type="text" id="address-input" name="address-input" placeholder="123 Main St." class="form-control" required><br>
                     </div>
                     <div class="dropdown-field">
-                        <label for="project-input">Project type</label><br>
+                        <label for="project-input">Project Type</label><br>
                         <div class="select-container">
                             <select id="project-input" name="project-input" required>
                                 <option value="" disabled selected hidden class="placeholder">Choose project type</option>
@@ -61,6 +67,8 @@
                                 <option value="Addition">Addition</option>
                                 <option value="Kitchen">Kitchen</option>
                                 <option value="Bathroom">Bathroom</option>
+                                <option value="Basement">Basement</option>
+                                <option value="Bedroom">Bedroom</option>
                                 <option value="Other">Other (Please indicate in message)</option>
                             </select>
                             <img class="arrow" src="images/icons/down-arrow@2x.png">
@@ -71,7 +79,8 @@
                         <div class="select-container">
                             <select id="budget-input" name="budget-input" required>
                                 <option value="" selected hidden class="placeholder">Choose budget</option>
-                                <option value="$5000">Under $5000</option>
+                                <option value="$2500">Under $2500</option>
+                                <option value="$5000">$2500-$5000</option>
                                 <option value="$10000">$5000-$10000</option>
                                 <option value="$50000">$10000-$50000</option>
                                 <option value="$100000">$50000-$100000</option>
@@ -95,9 +104,8 @@
         <div class="line"></div>
         <footer>
             <div id="contact-info">
-                <div id="name">Jerry Wong</div>
+                <a href="tel:6047007499">604-700-7499</a>
                 <div id="e-mail">planpacificconstruction@gmail.com</div>
-                <div id="phone-number">604-700-7499</div>
             </div>
             <div id="social-media">
                 <div id="social-icons">

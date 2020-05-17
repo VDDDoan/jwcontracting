@@ -167,7 +167,7 @@ header {
         position: absolute;
         top: 40%;
         width: auto;
-        padding: 5vw;
+        padding: 15px;
         color: white;
         font-weight: bold;
         font-size: 25px;
@@ -304,8 +304,11 @@ footer{
     align-items: center;
     justify-content: center;
     #contact-info{
+        a{
+            text-decoration: none;
+            color: $font-color;
+        }
         padding: 4vh 0 2vh 0;
-        // margin-bottom: 5vh;
         color: $font-color;
         text-align: center;
         font-size: 15px;
@@ -315,6 +318,9 @@ footer{
         flex-direction: row;
         align-items: center;
         #social-icons{
+            a{
+                text-decoration: none;
+            }
             img{
                 background-color: $font-color;
                 border-radius:50%;

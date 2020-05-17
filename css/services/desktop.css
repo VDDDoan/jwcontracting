@@ -123,9 +123,9 @@
     width: 50vw;
   }
   .prev, .next {
-    top: 35%;
+    top: 45%;
     font-size: 20px;
-    padding: 5vw;
+    padding: 15px;
   }
 }
 /*# sourceMappingURL=desktop.css.map */

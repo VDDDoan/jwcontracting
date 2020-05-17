@@ -178,6 +178,7 @@ fieldset{
         display: flex;
         align-items: center;
         padding: 0 0 0 0;
+
         img{
             position: absolute;
             right: 11vw;
@@ -264,6 +265,10 @@ footer{
     align-items: center;
     justify-content: center;
     #contact-info{
+        a{
+            text-decoration: none;
+            color: $font-color;
+        }
         padding: 4vh 0 2vh 0;
         color: $font-color;
         text-align: center;
@@ -274,6 +279,9 @@ footer{
         flex-direction: row;
         align-items: center;
         #social-icons{
+            a{
+                text-decoration: none;
+            }
             img{
                 background-color: $font-color;
                 border-radius:50%;
@@ -289,7 +297,5 @@ footer{
                 border-width: 3px;
             }
         }
-
-
     }
 }

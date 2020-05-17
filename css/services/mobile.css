@@ -230,7 +230,7 @@ header .menu-container .nav-active {
   position: absolute;
   top: 40%;
   width: auto;
-  padding: 5vw;
+  padding: 15px;
   color: white;
   font-weight: bold;
   font-size: 25px;
@@ -434,6 +434,11 @@ footer #contact-info {
   font-size: 15px;
 }
 
+footer #contact-info a {
+  text-decoration: none;
+  color: #e0e0e0;
+}
+
 footer #social-media {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -445,6 +450,10 @@ footer #social-media {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+footer #social-media #social-icons a {
+  text-decoration: none;
 }
 
 footer #social-media #social-icons img {
