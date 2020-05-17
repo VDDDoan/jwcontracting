@@ -265,15 +265,26 @@ fieldset{
     }
 }
 @keyframes autofill{
-    0%, 100%{
+    to{
         color:$font-color;
         background:transparent;
+    }
+}
+@-webkit-keyframes autofill{
+    to{
+        color:$font-color;
+        background-color:transparent;
     }
 }
 
 input:autofill{
     animation-name: autofill;
     animation-fill-mode: both;
+}
+
+input:-webkit-autofill{
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
 }
 
 
