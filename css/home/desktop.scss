@@ -43,7 +43,7 @@ $font-header: 1em;
                 position: relative;
                 width: 65vw;
                 height: 5vh;
-                //top: 50%;
+                background-color: transparent;
                 margin-bottom: 10vh;
                 flex-direction: row;
                 transform: translateX(0%);
@@ -67,6 +67,7 @@ $font-header: 1em;
                         letter-spacing: 4px;
                         .active{
                             font-size: $font-active;
+                            background-color: transparent;
                         }
                     }
                 }

@@ -57,6 +57,7 @@
     position: relative;
     width: 65vw;
     height: 5vh;
+    background-color: transparent;
     margin-bottom: 10vh;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -97,6 +98,7 @@
   }
   header .menu-container ul li a .active {
     font-size: 0.9em;
+    background-color: transparent;
   }
   .line-desktop {
     border-top: 1px solid #ef9629;

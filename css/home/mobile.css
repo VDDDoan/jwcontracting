@@ -24,7 +24,9 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  background-color: #161616;
+  background-color: transparent;
+  position: absolute;
+  z-index: 150;
 }
 
 header .logo-container {
@@ -96,7 +98,7 @@ header .menu-container .nav {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #161616;
-  opacity: 0.95;
+  opacity: 0.8;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   -webkit-transition: -webkit-transform 0.5s ease-in;
@@ -188,10 +190,11 @@ header .toggle .line3 {
 }
 
 .slideshow-container {
-  width: 90vw;
+  width: 100vw;
   position: relative;
   overflow: hidden;
-  height: 50vh;
+  height: 100vh;
+  background-color: black;
 }
 
 .slideshow-container img {
@@ -201,6 +204,7 @@ header .toggle .line3 {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  opacity: 0.8;
 }
 
 .slide {
