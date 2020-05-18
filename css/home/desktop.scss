@@ -3,41 +3,54 @@ $font-color: rgb(233, 233, 233);
 $background-color: rgb(22, 22, 22);
 $logo-color: #ef9629;
 $hover-background: rgb(95, 95, 95);
+$font-size: 0.8em;
+$font-active: 0.9em;
+$font-header: 1em;
+
 
 @media(min-width: 475px) and (min-height:500px){
     header{
+        .burger{
+            display:none;
+        }
+        .burger-logo-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         .logo-container{
-            width: 30vw;
+            width: 35vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             img{
                 width: 80%;
                 padding: 0;
-                padding-top:20px;
                 padding-left:10%;
             }
-        }
-
-        .burger{
-            display:none;
         }
 
         .menu-container{
             nav{
                 display:flex;
                 flex-direction: row;
-                align-items: flex-end;
+                align-items: flex-end | center;
+                justify-content: center;
             }
             .nav{
                 position: relative;
-                width: 70vw;
+                width: 65vw;
                 height: 5vh;
-                top: 0;
+                //top: 50%;
                 margin-bottom: 10vh;
                 flex-direction: row;
                 transform: translateX(0%);
                 transition-property: none;
             }
             ul{
-                width: 70vw;
+                width: 65vw;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
@@ -47,16 +60,13 @@ $hover-background: rgb(95, 95, 95);
                     text-align: center;
                     opacity: 1;
                     padding: 0;
-                    width: 25vw;
+                    width: 15vw;
                     min-width: 50px;
-                    a:hover{
-                        font-size: 18px;
-                    }
                     a{
-                        font-size: 17px;
+                        font-size: $font-size;
                         letter-spacing: 4px;
                         .active{
-                            font-size:19px;
+                            font-size: $font-active;
                         }
                     }
                 }
@@ -75,7 +85,7 @@ $hover-background: rgb(95, 95, 95);
             justify-content: center;
             //padding: 0 2vw 0 4vw;
             .slideshow-container{
-                width: 90vw;
+                width: 100vw;
                 height: 70vh;
                 margin-top: 5vw;
                .next, .prev{
@@ -85,22 +95,37 @@ $hover-background: rgb(95, 95, 95);
                 }
             }
         }
-        #about-us-container{
+        .desktop-container-about{
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 30vw;
-            margin-top: 4vw;
-            div{
-                margin-top: 0;
-                font-weight: 6;
-                font-size: 22px;
-                letter-spacing: 3px;
+            flex-direction: row;
+            align-items: flex-start;
+            #about-us-container{
+                display: flex;
+                flex-direction: column;
+                width: 40vw;
+                max-width: 400px;
+                padding-top: 50px;
+                div{
+                    font-weight: 10;
+                    font-size: $font-header;
+                    letter-spacing: 4px;
+                }
+                p{
+                    font-size: $font-size;
+                    letter-spacing: 2px;
+                    line-height: 2;
+                }
             }
-            p{
-                //padding: 0 5vw 0 2vw;
-                font-size: 15px;
-                letter-spacing: 1px;
+            .icon-container{
+                width: 60vw;
+                max-width: 600px;
+                p{
+                    padding: 0;
+                    padding-left: 10px;
+                }
+                .icon-sentence{
+                    margin-top: 20px;
+                }
             }
         }
 

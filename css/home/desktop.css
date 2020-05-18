@@ -1,15 +1,42 @@
 @media (min-width: 475px) and (min-height: 500px) {
+  header .burger {
+    display: none;
+  }
+  header .burger-logo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   header .logo-container {
-    width: 30vw;
+    width: 35vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   header .logo-container img {
     width: 80%;
     padding: 0;
-    padding-top: 20px;
     padding-left: 10%;
-  }
-  header .burger {
-    display: none;
   }
   header .menu-container nav {
     display: -webkit-box;
@@ -19,15 +46,17 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-align: flex-end | center;
+        -ms-flex-align: flex-end | center;
+            align-items: flex-end | center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   header .menu-container .nav {
     position: relative;
-    width: 70vw;
+    width: 65vw;
     height: 5vh;
-    top: 0;
     margin-bottom: 10vh;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -39,7 +68,7 @@
     transition-property: none;
   }
   header .menu-container ul {
-    width: 70vw;
+    width: 65vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -59,18 +88,15 @@
     text-align: center;
     opacity: 1;
     padding: 0;
-    width: 25vw;
+    width: 15vw;
     min-width: 50px;
   }
-  header .menu-container ul li a:hover {
-    font-size: 18px;
-  }
   header .menu-container ul li a {
-    font-size: 17px;
+    font-size: 0.8em;
     letter-spacing: 4px;
   }
   header .menu-container ul li a .active {
-    font-size: 19px;
+    font-size: 0.9em;
   }
   .line-desktop {
     border-top: 1px solid #ef9629;
@@ -96,14 +122,26 @@
             justify-content: center;
   }
   .desktop-container .carousel-container .slideshow-container {
-    width: 90vw;
+    width: 100vw;
     height: 70vh;
     margin-top: 5vw;
   }
   .desktop-container .carousel-container .slideshow-container .next, .desktop-container .carousel-container .slideshow-container .prev {
     padding: 8px;
   }
-  .desktop-container #about-us-container {
+  .desktop-container .desktop-container-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .desktop-container .desktop-container-about #about-us-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -111,21 +149,30 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 30vw;
-    margin-top: 4vw;
+    width: 40vw;
+    max-width: 400px;
+    padding-top: 50px;
   }
-  .desktop-container #about-us-container div {
-    margin-top: 0;
-    font-weight: 6;
-    font-size: 22px;
-    letter-spacing: 3px;
+  .desktop-container .desktop-container-about #about-us-container div {
+    font-weight: 10;
+    font-size: 1em;
+    letter-spacing: 4px;
   }
-  .desktop-container #about-us-container p {
-    font-size: 15px;
-    letter-spacing: 1px;
+  .desktop-container .desktop-container-about #about-us-container p {
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    line-height: 2;
+  }
+  .desktop-container .desktop-container-about .icon-container {
+    width: 60vw;
+    max-width: 600px;
+  }
+  .desktop-container .desktop-container-about .icon-container p {
+    padding: 0;
+    padding-left: 10px;
+  }
+  .desktop-container .desktop-container-about .icon-container .icon-sentence {
+    margin-top: 20px;
   }
   #submit {
     display: none;

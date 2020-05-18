@@ -1,8 +1,6 @@
 @media (orientation: landscape) and (max-height: 450px) {
   header .logo-container .logo img {
-    width: 50%;
-    margin-left: 25%;
-    padding-top: 5vh;
+    width: 40%;
   }
   header .menu-container .nav {
     width: 100vw;
