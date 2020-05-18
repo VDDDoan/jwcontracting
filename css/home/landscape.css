@@ -10,5 +10,8 @@
     width: 100vw;
     height: 100vh;
   }
+  .slideshow-container img {
+    width: 100vw;
+  }
 }
 /*# sourceMappingURL=landscape.css.map */
