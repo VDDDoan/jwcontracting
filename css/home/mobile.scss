@@ -20,58 +20,41 @@ body {
 // top navigation bar 
 
 header {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
     width: 100%;
     background-color: $background-color;
-// Logo styling     
-    .logo-container{
-        display:flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding-top: 11vh;
-        margin-bottom: 15px;
-        .logo img{
-            width: 90vw;
-            align-self:center;
-        }
-    }
-// Hamburger menu styling 
-    .head-container{
+// Logo styling  
+    .burger-logo-container{
         display: flex;
-        position:fixed;
-        z-index: 98;
-        width: 100vw;
-        height: 10vh;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: right;
-        background-color: $background-color;
-        opacity: 0.95;
-        #hamburger-menu{
-            display:flex;
-            margin: 0;
-            padding: 0;
-            background-color: $background-color;
-            align-self: center;
-            justify-content: flex-end;
-            height: 10vh;
-            img {
-                display: flex;
-                align-self:center;
-                width: auto;
-                z-index: 99;
-                height: 8vh;
-                min-height: 36px;
-                max-height: 40px;
-                padding-right: 5vw;
-                padding-top: 1vh;
-                padding-bottom: 1vh;
-                opacity: 1;
-
-            }
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .logo-container{
+        display:block;
+        margin-bottom: 15px;
+        img{
+            width: 80%;
+            margin-left: 10%;
+            padding: 20px 10vw 0 10vw;
         }
     }
+
+    .burger div{
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+    .burger{
+        padding: 10px;
+        position: fixed;
+        z-index: 99;
+    }
+
 // menu styling and animations
     .menu-container{
         display:flex;
@@ -83,40 +66,40 @@ header {
             z-index: 100;
             position: fixed;
             display:flex;
-            height: 90vh;
+            height: 95vh;
             width: 75vw;
-            top: 10vh;
+            top: 5vh;
+            right: 0;
             align-items:center;
-            justify-content: space-around;
+            flex-direction: column;
             background-color: $background-color;
             opacity: 0.95;
             transform: translateX(100%);
-            transition: transform 0.5s ease-in;
-            ul{
-                li{
-                    opacity: 0;
-                    a:hover{
-                        font-size: 15px;
-                        font-weight:bold;
-                    }
-                    list-style: none;
-                    padding: 10vh 0 10vh 0;
-                    }
-                    a{
-                        color: $font-color;
-                        text-decoration: none;
-                        letter-spacing: 3px;
-                        font-size: 14px;
-                        .active{
-                            font-size: 16px;
-                            font-weight: bold;
-                            text-decoration: underline;
-                            color: $logo-color;
-                            background-color:$background-color;
-                    }
+            transition: transform 0.5s ease-in; 
+        }
+        ul{
+            li{
+                opacity: 0;
+                a:hover{
+                    font-size: 15px;
+                    font-weight:bold;
+                }
+                list-style: none;
+                padding: 10vh 0 10vh 0;
+                }
+                a{
+                    color: $font-color;
+                    text-decoration: none;
+                    letter-spacing: 2px;
+                    font-size: 14px;
+                    .active{
+                        font-size: 16px;
+                        font-weight: bold;
+                        text-decoration: underline;
+                        color: $logo-color;
+                        background-color:$background-color;
                 }
             }
-    
         }
         .nav-active{
             transform: translateX(0%)
@@ -133,6 +116,15 @@ header {
                 transform: translateX(0);
             }
         }
+    }
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+    .toggle .line2{
+        opacity: 0;
+    }
+    .toggle .line3{
+        transform: rotate(45deg) translate(-5px,-6px);
     }
 
 }

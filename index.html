@@ -19,16 +19,24 @@
     <body>   
         <!-- header section with logo and menu -->
         <header>
-            <div class ="head-container">
+            <!--<div class ="head-container">
                 <div id="hamburger-menu"><img src="images/icons/Hamburger-Menu.png" id="menu"></div>
-            </div>
-            <div class = "logo-container">
-                <a href=index.html><div class="logo"><img src="images/logo/PPC_Alternate_White_Orange.png"></div></a>
-            </div>
+            </div>-->
+
             <div class="line-desktop"></div>
             <div class ="menu-container">
-                <nav class="nav">
-                    <ul>
+                <nav>
+                    <div class="burger-logo-container">
+                        <div class="burger">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </div>
+                        <div class = "logo-container">
+                            <a href=index.html><div class="logo"><img src="images/logo/PPC_White_Orange.png"></div></a>
+                        </div>
+                    </div>
+                    <ul class="nav">
                         <li class="menu-border"><a href="index.html"><p class="active">Home</p></a></li>
                         <li class="menu-border"><a href="services.html">Services</a></li>
                         <li class="menu-border"><a href="projects.html">Projects</a></li>
@@ -36,8 +44,8 @@
                     </ul>
                 </nav>
             </div>
-            <div class="line-desktop"></div>
         </header>
+        <div class="line-desktop"></div>
         <!-- slideshow image carousel -->
         <div class="desktop-container">
             <div class="carousel-container">

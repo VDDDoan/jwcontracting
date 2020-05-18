@@ -7,69 +7,76 @@ $hover-background: rgb(95, 95, 95);
 @media(min-width: 475px) and (min-height:500px){
     header{
         .logo-container{
-            padding-top: 5vh;
-            .logo img{
-                width: 75vw;
-                max-width: 500px;
+            width: 30vw;
+            img{
+                width: 80%;
+                padding: 0;
+                padding-top:20px;
+                padding-left:10%;
             }
-            margin-bottom: 5vh;
         }
-        .head-container{
+
+        .burger{
             display:none;
         }
-        .line-desktop{
-            border-top: 1px solid $logo-color;
-        }
+
         .menu-container{
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            nav{
+                display:flex;
+                flex-direction: row;
+                align-items: flex-end;
+            }
             .nav{
                 position: relative;
-                width: 100vw;
+                width: 70vw;
                 height: 5vh;
                 top: 0;
+                margin-bottom: 10vh;
+                flex-direction: row;
                 transform: translateX(0%);
                 transition-property: none;
-                ul{
-                    width: 75vw;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
+            }
+            ul{
+                width: 70vw;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                li{
                     text-align: center;
-                    li{
-                        display: in-line;
-                        text-align: center;
-                        opacity: 1;
-                        padding: 0;
-                        width: 25vw;
-                        min-width: 50px;
-                        a:hover{
-                            font-size: 18px;
-                        }
-                        a{
-                            font-size: 17px;
-                            letter-spacing: 4px;
-                            .active{
-                                font-size:19px;
-                            }
+                    opacity: 1;
+                    padding: 0;
+                    width: 25vw;
+                    min-width: 50px;
+                    a:hover{
+                        font-size: 18px;
+                    }
+                    a{
+                        font-size: 17px;
+                        letter-spacing: 4px;
+                        .active{
+                            font-size:19px;
                         }
                     }
                 }
             }
         }
     }
+    .line-desktop{
+        border-top: 1px solid $logo-color;
+    }
     .desktop-container{
         display: flex;
-        flex-direction: row;
-        align-items:start;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
         .carousel-container{
             justify-content: center;
-            padding: 0 2vw 0 4vw;
+            //padding: 0 2vw 0 4vw;
             .slideshow-container{
-                width: 60vw;
+                width: 90vw;
+                height: 70vh;
                 margin-top: 5vw;
                .next, .prev{
                     padding: 8px;
