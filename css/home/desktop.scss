@@ -60,9 +60,12 @@ $font-header: 1em;
                     a{
                         font-size: $font-size;
                         letter-spacing: 4px;
+                        font-weight: bold;
                         .active{
-                            font-size: $font-active;
+                            font-weight: bold;
                             background-color: transparent;
+                            color: $font-color;
+                            border: 2px solid $logo-color;
                         }
                     }
                 }
@@ -103,11 +106,10 @@ $font-header: 1em;
                 padding-top: 50px;
                 div{
                     font-weight: 10;
-                    font-size: $font-header;
                     letter-spacing: 4px;
                 }
                 p{
-                    font-size: $font-size;
+
                     letter-spacing: 2px;
                     line-height: 2;
                 }
