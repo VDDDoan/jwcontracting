@@ -13,12 +13,6 @@ $font-header: 1em;
         .burger{
             display:none;
         }
-        .burger-logo-container{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
         .logo-container{
             width: 35vw;
             display: flex;
@@ -36,13 +30,14 @@ $font-header: 1em;
             nav{
                 display:flex;
                 flex-direction: row;
-                align-items: flex-end | center;
+                align-items: center;
                 justify-content: center;
             }
             .nav{
                 position: relative;
                 width: 65vw;
                 height: 5vh;
+                top: 5vh;
                 background-color: transparent;
                 margin-bottom: 10vh;
                 flex-direction: row;
