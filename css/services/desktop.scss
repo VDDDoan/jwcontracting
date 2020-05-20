@@ -3,58 +3,69 @@ $font-color: rgb(233, 233, 233);
 $background-color: rgb(22, 22, 22);
 $logo-color: #ef9629;
 $hover-background: rgb(95, 95, 95);
+$font-size: 0.8em;
+$font-active: 0.9em;
+$font-header: 1em;
+
 
 @media (min-width: 450px) and (min-height: 500px){
     header{
-        .logo-container{
-            padding-top: 5vh;
-            .logo img{
-                width: 75vw;
-                max-width: 500px;
-            }
-            margin-bottom: 5vh;
-        }
-        .head-container{
+        .burger{
             display:none;
         }
-        .line-desktop{
-            border-top: 1px solid $logo-color;
-        }
-        .menu-container{
-            display:flex;
+        .logo-container{
+            width: 35vw;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            img{
+                width: 80%;
+                padding: 0;
+                padding-left:10%;
+            }
+        }
+
+        .menu-container{
+            nav{
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
             .nav{
                 position: relative;
-                width: 100vw;
+                width: 65vw;
                 height: 5vh;
-                top: 0;
+                top: 5vh;
+                background-color: transparent;
+                margin-bottom: 10vh;
+                flex-direction: row;
                 transform: translateX(0%);
                 transition-property: none;
-                ul{
-                    width: 75vw;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
+            }
+            ul{
+                width: 65vw;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                li{
                     text-align: center;
-                    li{
-                        display: in-line;
-                        text-align: center;
-                        opacity: 1;
-                        padding: 0;
-                        width: 25vw;
-                        min-width: 50px;
-                        a:hover{
-                            font-size: 22px;
-                        }
-                        a{
-                            font-size: 20px;
-                            letter-spacing: 4px;
-                            .active{
-                                font-size:19px;
-                            }
+                    opacity: 1;
+                    padding: 0;
+                    width: 15vw;
+                    min-width: 50px;
+                    a{
+                        font-size: $font-size;
+                        letter-spacing: 4px;
+                        font-weight: bold;
+                        .active{
+                            font-weight: bold;
+                            background-color: transparent;
+                            color: $font-color;
+                            border: 2px solid $logo-color;
                         }
                     }
                 }
@@ -67,7 +78,12 @@ $hover-background: rgb(95, 95, 95);
     }
 
     h3{
-        font-size: 24px;
+        font-size: $font-header;
+        letter-spacing: 2px;
+    }
+    .prev:hover, .next:hover{
+        border: 2px solid white;
+        background-color: rgba(0,0,0,0.9);
     }
 
     .container.left, .container.right{
@@ -76,12 +92,20 @@ $hover-background: rgb(95, 95, 95);
         margin: 2vh 0 0 0;
         p{
             width: 40vw;
-            font-size: 20px;
+            font-size: $font-size;
+            line-height: 2;
+            letter-spacing: 1px;
             padding: 0 2vw 0 2vw;
         }
         .carousel-container{
             margin: 0;
             padding: 0;
+        }
+        ul{
+            li{
+                line-height: 2;
+                letter-spacing: 1px;
+            }
         }
     }   
 
@@ -113,7 +137,7 @@ $hover-background: rgb(95, 95, 95);
 
     .prev, .next{
         top: 45%;
-        font-size: 20px;
+        font-size: $font-size;
         padding: 15px;
     }
 }

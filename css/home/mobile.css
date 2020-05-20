@@ -43,7 +43,7 @@ header .burger div {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: white;
+  background-color: #161616;
   margin: 5px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -115,6 +115,7 @@ header .menu-container ul li {
 
 header .menu-container ul li a:hover {
   font-weight: bold;
+  font-size: 0.9em;
 }
 
 header .menu-container ul a {
@@ -165,6 +166,7 @@ header .menu-container .nav-active {
 header .toggle .line1 {
   -webkit-transform: rotate(-45deg) translate(-5px, 6px);
           transform: rotate(-45deg) translate(-5px, 6px);
+  background-color: white;
 }
 
 header .toggle .line2 {
@@ -174,6 +176,7 @@ header .toggle .line2 {
 header .toggle .line3 {
   -webkit-transform: rotate(45deg) translate(-5px, -6px);
           transform: rotate(45deg) translate(-5px, -6px);
+  background-color: white;
 }
 
 .carousel-container {
@@ -199,12 +202,24 @@ header .toggle .line3 {
 
 .slideshow-container img {
   position: absolute;
-  height: 100%;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 0.8;
+}
+
+@media (max-width: 450px) {
+  .slideshow-container img {
+    height: 100%;
+  }
+}
+
+@media (min-width: 451px) {
+  .slideshow-container img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .slide {
@@ -230,11 +245,6 @@ header .toggle .line3 {
 
 .next {
   right: 0;
-}
-
-.prev:hover, .next:hover {
-  border: 2px solid white;
-  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .dot-container {
@@ -345,7 +355,7 @@ header .toggle .line3 {
 }
 
 #downward-arrow a:hover {
-  color: white;
+  color: black;
 }
 
 .desktop-container-about {
@@ -414,6 +424,8 @@ header .toggle .line3 {
   background-color: #ef9629;
   width: 60px;
   border-radius: 60px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .desktop-container-about .icon-container .icon-sentence p {
@@ -441,6 +453,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: rgba(23, 23, 23, 0.2);
 }
 
 footer #contact-info {
@@ -475,7 +488,7 @@ footer #social-media #social-icons a {
 footer #social-media #social-icons img {
   background-color: #ef9629;
   border-radius: 50%;
-  border: 2px solid #161616;
+  border: 1px solid #ef9629;
   width: auto;
   height: 7vh;
   min-height: 40px;
@@ -484,7 +497,7 @@ footer #social-media #social-icons img {
 }
 
 footer #social-media #social-icons img:hover {
-  background-color: white;
-  border-width: 3px;
+  border-width: 2px;
+  border-color: black;
 }
 /*# sourceMappingURL=mobile.css.map */

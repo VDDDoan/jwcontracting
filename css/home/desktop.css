@@ -89,6 +89,10 @@
     color: #e9e9e9;
     border: 2px solid #ef9629;
   }
+  .prev:hover, .next:hover {
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
   .line-desktop {
     border-top: 1px solid #ef9629;
   }
@@ -107,20 +111,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .desktop-container .carousel-container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .desktop-container .carousel-container .slideshow-container {
-    width: 100vw;
-    height: 70vh;
-    margin-top: 5vw;
-  }
-  .desktop-container .carousel-container .slideshow-container .next, .desktop-container .carousel-container .slideshow-container .prev {
-    padding: 8px;
-  }
-  .desktop-container .desktop-container-about {
+  .desktop-container-about {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -132,7 +123,7 @@
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .desktop-container .desktop-container-about #about-us-container {
+  .desktop-container-about #about-us-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -142,36 +133,48 @@
             flex-direction: column;
     width: 40vw;
     max-width: 400px;
-    padding-top: 50px;
+    padding-top: 30px;
   }
-  .desktop-container .desktop-container-about #about-us-container div {
+  .desktop-container-about #about-us-container div {
     font-weight: 10;
     letter-spacing: 4px;
   }
-  .desktop-container .desktop-container-about #about-us-container p {
-    letter-spacing: 2px;
+  .desktop-container-about #about-us-container p {
+    letter-spacing: 1px;
     line-height: 2;
   }
-  .desktop-container .desktop-container-about .icon-container {
+  .desktop-container-about .icon-container {
     width: 60vw;
-    max-width: 600px;
+    max-width: 700px;
   }
-  .desktop-container .desktop-container-about .icon-container p {
-    padding: 0;
-    padding-left: 10px;
-  }
-  .desktop-container .desktop-container-about .icon-container .icon-sentence {
+  .desktop-container-about .icon-container .icon-sentence {
     margin-top: 20px;
+  }
+  .desktop-container-about .icon-container .icon-sentence p {
+    padding: 0;
+    padding-left: 30px;
+    letter-spacing: 1px;
   }
   #submit {
     display: none;
   }
   #downward-arrow {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 90vh;
+  }
+  #downward-arrow a {
+    color: white;
+  }
+  #downward-arrow a:hover {
+    color: #ef9629;
   }
   #contact-info {
     margin: 0;
     padding-top: 2vh;
+  }
+  #about-us-container p {
+    text-align: left;
   }
 }
 /*# sourceMappingURL=desktop.css.map */

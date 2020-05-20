@@ -72,6 +72,12 @@ $font-header: 1em;
             }
         }
     }
+
+    .prev:hover, .next:hover{
+        border: 2px solid white;
+        background-color: rgba(0,0,0,0.9);
+    }
+
     .line-desktop{
         border-top: 1px solid $logo-color;
     }
@@ -80,60 +86,56 @@ $font-header: 1em;
         flex-direction: column;
         justify-content: center;
         align-items:center;
-        .carousel-container{
-            justify-content: center;
-            //padding: 0 2vw 0 4vw;
-            .slideshow-container{
-                width: 100vw;
-                height: 70vh;
-                margin-top: 5vw;
-               .next, .prev{
-                    padding: 8px;
-                    //max-width: 40px;
-                    //max-height: 40px;
-                }
+    }
+    
+
+    .desktop-container-about{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        #about-us-container{
+            display: flex;
+            flex-direction: column;
+            width: 40vw;
+            max-width: 400px;
+            padding-top: 30px;
+            div{
+                font-weight: 10;
+                letter-spacing: 4px;
+            }
+            p{
+                letter-spacing: 1px;
+                line-height: 2;
             }
         }
-        .desktop-container-about{
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            #about-us-container{
-                display: flex;
-                flex-direction: column;
-                width: 40vw;
-                max-width: 400px;
-                padding-top: 50px;
-                div{
-                    font-weight: 10;
-                    letter-spacing: 4px;
-                }
-                p{
-
-                    letter-spacing: 2px;
-                    line-height: 2;
-                }
-            }
-            .icon-container{
-                width: 60vw;
-                max-width: 600px;
+        .icon-container{
+            width: 60vw;
+            max-width: 700px;
+            .icon-sentence{
+                margin-top: 20px;
                 p{
                     padding: 0;
-                    padding-left: 10px;
-                }
-                .icon-sentence{
-                    margin-top: 20px;
+                    padding-left: 30px;
+                    letter-spacing: 1px;
                 }
             }
         }
-
     }
+
     #submit{
         display:none;
     }
 
     #downward-arrow{
-        display:none;
+        display:block;
+        position:absolute;
+        a{
+            color: white;
+        }
+        a:hover{
+            color: $logo-color;
+        }
+        top: 90vh;
     }
 
     #contact-info{
@@ -141,4 +143,9 @@ $font-header: 1em;
         padding-top: 2vh;
     }
 
+    #about-us-container{
+        p{
+            text-align: left;
+        }
+    }
 }
