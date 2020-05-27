@@ -124,10 +124,10 @@
     letter-spacing: 1px;
   }
   .container.left .carousel-container {
-    padding-left: 5vw;
+    padding-left: 30px;
   }
   .container.left p {
-    padding-left: 5vw;
+    padding-left: 30px;
   }
   .container.right {
     display: -webkit-box;
