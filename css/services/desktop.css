@@ -98,6 +98,7 @@
   }
   .prev:hover, .next:hover {
     border: 2px solid white;
+    color: white;
     background-color: rgba(0, 0, 0, 0.9);
   }
   .container.left, .container.right {
@@ -113,7 +114,7 @@
     font-size: 0.8em;
     line-height: 2;
     letter-spacing: 1px;
-    padding: 0 2vw 0 2vw;
+    padding: 0;
   }
   .container.left .carousel-container, .container.right .carousel-container {
     margin: 0;
@@ -151,8 +152,14 @@
   }
   .prev, .next {
     top: 45%;
-    font-size: 0.8em;
+    font-size: 28px;
     padding: 15px;
+  }
+}
+
+@media (min-width: 450px) and (min-height: 500px) and (min-width: 2000px) {
+  .prev, .next {
+    color: black;
   }
 }
 /*# sourceMappingURL=desktop.css.map */

@@ -83,6 +83,7 @@ $font-header: 1em;
     }
     .prev:hover, .next:hover{
         border: 2px solid white;
+        color: white;
         background-color: rgba(0,0,0,0.9);
     }
 
@@ -95,7 +96,7 @@ $font-header: 1em;
             font-size: $font-size;
             line-height: 2;
             letter-spacing: 1px;
-            padding: 0 2vw 0 2vw;
+            padding: 0;
         }
         .carousel-container{
             margin: 0;
@@ -137,7 +138,10 @@ $font-header: 1em;
 
     .prev, .next{
         top: 45%;
-        font-size: $font-size;
+        font-size: 28px;
         padding: 15px;
+        @media (min-width: 2000px){
+            color: black;
+        }
     }
 }
