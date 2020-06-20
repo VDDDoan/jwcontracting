@@ -157,7 +157,7 @@
   }
 }
 
-@media (min-width: 450px) and (min-height: 500px) and (min-width: 2000px) {
+@media (min-width: 450px) and (min-height: 500px) and (min-width: 1500px) {
   .prev, .next {
     color: black;
   }

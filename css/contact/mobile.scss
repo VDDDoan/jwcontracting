@@ -1,10 +1,13 @@
 $font-stack: Helvetica, sans-serif;
-$font-size: 20px;
-$label-size: 25px;
-$font-color: rgb(233, 233, 233);
-$background-color: rgb(22, 22, 22);
+$font-color: rgb(22, 22, 22);
+$background-color: white;
 $logo-color: #ef9629;
 $hover-background: rgb(95, 95, 95);
+$font-size: 0.8em;
+$font-active: 0.9em;
+$font-header: 1em;
+$mobile-color: rgb(22,22,22);
+$mobile-text: rgb(233,233,233);
 
 *{
     margin: 0;
@@ -20,106 +23,85 @@ body {
 }
 
 // top navigation bar 
-
 header {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
     width: 100%;
-    background-color: $background-color;
+    background: rgba(61, 61, 61, 0.5);
 // Logo styling     
     .logo-container{
-        display:flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding-top: 11vh;
+        display:block;
         margin-bottom: 15px;
-        .logo img{
-            width: 90vw;
-            align-self:center;
+        img{
+            width: 60%;
+            padding: 0.6em;
         }
     }
 // Hamburger menu styling 
-    .head-container{
-        display: flex;
-        position:fixed;
-        z-index: 98;
-        width: 100vw;
-        height: 10vh;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: right;
-        background-color: $background-color;
-        opacity: 0.95;
-        #hamburger-menu{
-            display:flex;
-            margin: 0;
-            padding: 0;
-            background-color: $background-color;
-            align-self: center;
-            justify-content: flex-end;
-            height: 10vh;
-            img {
-                display: flex;
-                align-self:center;
-                width: auto;
-                z-index: 99;
-                height: 8vh;
-                min-height: 36px;
-                max-height: 40px;
-                padding-right: 5vw;
-                padding-top: 1vh;
-                padding-bottom: 1vh;
-                opacity: 1;
-
-            }
-        }
+    .burger div{
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: $font-color;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+    .burger{
+        padding: 1em;
+        padding-right: .5em;
+        position: fixed;
+        z-index: 110;
     }
 // menu styling and animations
     .menu-container{
         display:flex;
         flex-direction:row;
-        justify-content: flex-end;
+        //justify-content: flex-end;
         // menu styling when hamburger button is pressed
+        .burger-logo-container{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
         .nav{
             position: absolute;
             z-index: 100;
             position: fixed;
             display:flex;
-            height: 90vh;
+            height:100vh;
             width: 75vw;
-            top: 10vh;
+            top: 0;
+            right: 0;
             align-items:center;
-            justify-content: space-around;
-            background-color: $background-color;
-            opacity: 0.95;
+            flex-direction: column;
+            background-color: $mobile-color;
+            opacity: 0.8;
             transform: translateX(100%);
-            transition: transform 0.5s ease-in;
-            ul{
-                //margin-bottom: 20vh;
-                li{
-                    opacity: 0;
-                    a:hover{
-                        font-size: 15px;
-                        font-weight:bold;
-                    }
-                    list-style: none;
-                    padding: 10vh 0 10vh 0;
-                    }
-                    a{
-                        color: $font-color;
-                        text-decoration: none;
-                        letter-spacing: 3px;
-                        font-size: 14px;
-                        .active{
-                            font-size: 16px;
-                            font-weight: bold;
-                            text-decoration: underline;
-                            color: $logo-color;
-                            background-color:$background-color;
-                    }
+            transition: transform 0.5s ease-in; 
+        }
+        ul{
+            li{
+                opacity: 0;
+                a:hover{
+                    font-weight:bold;
+                    font-size: $font-active;
+                }
+                list-style: none;
+                padding: 10vh 0 10vh 0;
+                }
+                a{
+                    color: $mobile-text;
+                    text-decoration: none;
+                    letter-spacing: 2px;
+                    font-size: $font-size;
+                    .active{
+                        font-weight: bold;
+                        text-decoration: underline;
+                        color: $logo-color;
+                        background-color:rgb(22, 22, 22);
                 }
             }
-    
         }
         .nav-active{
             transform: translateX(0%)
@@ -138,6 +120,32 @@ header {
         }
     }
 
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px,6px);
+        background-color: white;
+    }
+    .toggle .line2{
+        opacity: 0;
+    }
+    .toggle .line3{
+        transform: rotate(45deg) translate(-5px,-6px);
+        background-color: white;
+    }
+}
+
+.contact-icons-container{
+    display: flex;
+    flex-direction:column;
+    .contact-icon{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    img{
+        width: auto;
+        min-height: 40px;
+        max-height: 45px;
+    }
 }
 
 legend{
@@ -151,9 +159,10 @@ legend{
 }
 
 
+
 fieldset{
     width: 90vw;
-    margin: 5vw 0 0 5vw;
+    margin: 5vw 0 5vh 5vw;
     .input-field, .dropdown-field, .message-field{
         width: 80vw;
         margin: 4vh 0 0 5vw;
@@ -161,7 +170,7 @@ fieldset{
     label{
         color:$font-color;
         margin-top: 2vh;
-        font-size: $label-size;
+        font-size: $font-header;
     }
     input, .select-container{
         width: 80vw;
@@ -199,8 +208,6 @@ fieldset{
         }
     }
 
-
-
     textarea{
         width: 80vw;
         height: 20vh;
@@ -226,6 +233,7 @@ fieldset{
         background: rgba(239, 199, 41, 0.1);
     }
 }
+
 @keyframes autofill{
     to{
         color:$font-color;
@@ -252,11 +260,13 @@ input:-webkit-autofill{
 }
 
 
+
+
 .center-button{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 5vh;
+    margin: 5vh 0 5vh 0;
     .button-container{
         display: flex;
         text-align: center;
@@ -269,7 +279,7 @@ input:-webkit-autofill{
             letter-spacing: 5px;
             background-color: $background-color;
             border: 2px solid $font-color;
-            width: 200px;
+            width: 160px;
             height: 38px;
             border-radius: 30px;
         }
@@ -279,8 +289,7 @@ input:-webkit-autofill{
 
 // footer
 .line{
-    border-top: 1px solid $logo-color;
-    margin-top: 5vh;
+    border-top: 2px solid $logo-color;
 }
 footer{
     display: flex;
@@ -295,7 +304,7 @@ footer{
         padding: 4vh 0 2vh 0;
         color: $font-color;
         text-align: center;
-        font-size: 15px;
+        font-size: $font-size;
     }
     #social-media{
         display: flex;
@@ -306,9 +315,9 @@ footer{
                 text-decoration: none;
             }
             img{
-                background-color: $font-color;
+                background-color: $logo-color;
                 border-radius:50%;
-                border: 2px solid $font-color;
+                border: 1px solid $logo-color;
                 width: auto;
                 height: 7vh;
                 min-height: 40px;
@@ -316,9 +325,10 @@ footer{
                 margin: 0 1vw 2vh 1vw;
             }
             img:hover{
-                background-color: white;
-                border-width: 3px;
+                border-width: 2px;
+                border-color: black;
             }
         }
     }
+    background: rgba(23,23,23,0.2);
 }

@@ -26,39 +26,15 @@ navSlide();
 
 // slideshow carousel script for first container
 var slideIndex = 1;
-
-var myTimer;
-
-var slideshowContainer;
-
-window.addEventListener("load",function() {
-    showSlides(slideIndex);
-    myTimer = setInterval(function(){plusSlides(1)}, 4000);
-  
-})
+showSlides(slideIndex);
 
 // NEXT AND PREVIOUS CONTROL
 function plusSlides(n){
-  clearInterval(myTimer);
-  if (n < 0){
-    showSlides(slideIndex -= 1);
-  } else {
-   showSlides(slideIndex += 1); 
-  }
-  
-  //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-  
-  if (n === -1){
-    myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
-  } else {
-    myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
-  }
+  showSlides(slideIndex += n);
 }
 
 //Controls the current slide and resets interval if needed
 function currentSlide(n){
-  clearInterval(myTimer);
-  myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
   showSlides(slideIndex = n);
 }
 
@@ -81,35 +57,16 @@ function showSlides(n){
 
 // slideshow carousel script for second container
 var slideIndex1 = 1;
-var myTimer1;
-var slideshowContainer1;
-
-window.addEventListener("load",function() {
-    showSlides1(slideIndex1);
-    myTimer1 = setInterval(function(){plusSlides1(1)}, 4000);
-  
-})
+showSlides1(slideIndex1);
 
 // NEXT AND PREVIOUS CONTROL
 function plusSlides1(n){
-  clearInterval(myTimer1);
-  if (n < 0){
-    showSlides1(slideIndex1 -= 1);
-  } else {
-    showSlides1(slideIndex1 += 1); 
-  }
-  if (n === -1){
-    myTimer1 = setInterval(function(){plusSlides1(n + 2)}, 4000);
-  } else {
-    myTimer1 = setInterval(function(){plusSlides1(n + 1)}, 4000);
-  }
+  showSlides1(slideIndex1 += n);
 }
 
 //Controls the current slide and resets interval if needed
 function currentSlide1(n){
-  clearInterval(myTimer1);
-  myTimer1 = setInterval(function(){plusSlides1(n + 1)}, 4000);
-  showSlides1(slideIndex1 = n);
+  showSlides(n);
 }
 
 function showSlides1(n){
@@ -132,35 +89,17 @@ function showSlides1(n){
 
 // slideshow carousel script for 3rd container
 var slideIndex2 = 1;
-var myTimer2;
-var slideshowContainer2;
+showSlides2(slideIndex2);
 
-window.addEventListener("load",function() {
-    showSlides2(slideIndex2);
-    myTimer2 = setInterval(function(){plusSlides2(1)}, 4000);
-  
-})
 
 // NEXT AND PREVIOUS CONTROL
 function plusSlides2(n){
-  clearInterval(myTimer2);
-  if (n < 0){
-    showSlides2(slideIndex2 -= 1);
-  } else {
-   showSlides2(slideIndex2 += 1); 
-  }
-  if (n === -1){
-    myTimer2 = setInterval(function(){plusSlides2(n + 2)}, 4000);
-  } else {
-    myTimer2 = setInterval(function(){plusSlides2(n + 1)}, 4000);
-  }
+  showSlides(slideIndex2 += n);
 }
 
 //Controls the current slide and resets interval if needed
 function currentSlide2(n){
-  clearInterval(myTimer2);
-  myTimer2 = setInterval(function(){plusSlides2(n + 1)}, 4000);
-  showSlides2(slideIndex2 = n);
+  showSlides(slideIndex2 = n);
 }
 
 function showSlides2(n){
@@ -181,34 +120,16 @@ function showSlides2(n){
 
 // slideshow carousel script for 4th container
 var slideIndex3 = 1;
-var myTimer3;
-var slideshowContainer3;
+showSlides3(slideIndex3);
 
-window.addEventListener("load",function() {
-    showSlides3(slideIndex3);
-    myTimer3 = setInterval(function(){plusSlides3(1)}, 4000);
-  
-})
 
 // NEXT AND PREVIOUS CONTROL
 function plusSlides3(n){
-  clearInterval(myTimer3);
-  if (n < 0){
-    showSlides3(slideIndex3 -= 1);
-  } else {
-   showSlides3(slideIndex3 += 1); 
-  }
-  if (n === -1){
-    myTimer3 = setInterval(function(){plusSlides3(n + 2)}, 4000);
-  } else {
-    myTimer3 = setInterval(function(){plusSlides3(n + 1)}, 4000);
-  }
+  showSlides3(slideIndex += n);
 }
 
 //Controls the current slide and resets interval if needed
 function currentSlide3(n){
-  clearInterval(myTimer3);
-  myTimer3 = setInterval(function(){plusSlides3(n + 1)}, 4000);
   showSlides3(slideIndex3 = n);
 }
 
@@ -230,34 +151,16 @@ function showSlides3(n){
 
 // slideshow carousel script for 5th container
 var slideIndex4 = 1;
-var myTimer4;
-var slideshowContainer4;
+showSlides4(slideIndex4);
 
-window.addEventListener("load",function() {
-    showSlides4(slideIndex4);
-    myTimer4 = setInterval(function(){plusSlides4(1)}, 4000);
-  
-})
 
 // NEXT AND PREVIOUS CONTROL
 function plusSlides4(n){
-  clearInterval(myTimer4);
-  if (n < 0){
-    showSlides4(slideIndex4 -= 1);
-  } else {
-   showSlides4(slideIndex4 += 1); 
-  }
-  if (n === -1){
-    myTimer4 = setInterval(function(){plusSlides4(n + 2)}, 4000);
-  } else {
-    myTimer4 = setInterval(function(){plusSlides4(n + 1)}, 4000);
-  }
+  showSlides4(slideIndex4 += n); 
 }
 
 //Controls the current slide and resets interval if needed
 function currentSlide4(n){
-  clearInterval(myTimer4);
-  myTimer4 = setInterval(function(){plusSlides4(n + 1)}, 4000);
   showSlides4(slideIndex4 = n);
 }
 
@@ -279,34 +182,15 @@ function showSlides4(n){
 
 // slideshow carousel script for 6th container
 var slideIndex5 = 1;
-var myTimer5;
-var slideshowContainer5;
-
-window.addEventListener("load",function() {
-    showSlides5(slideIndex5);
-    myTimer5 = setInterval(function(){plusSlides5(1)}, 4000);
-  
-})
+showSlides5(slideIndex5);
 
 // NEXT AND PREVIOUS CONTROL
 function plusSlides5(n){
-  clearInterval(myTimer5);
-  if (n < 0){
-    showSlides5(slideIndex5 -= 1);
-  } else {
-   showSlides5(slideIndex5 += 1); 
-  }
-  if (n === -1){
-    myTimer5 = setInterval(function(){plusSlides5(n + 2)}, 4000);
-  } else {
-    myTimer5 = setInterval(function(){plusSlides5(n + 1)}, 4000);
-  }
+  showSlides5(slideIndex5 += n); 
 }
 
 //Controls the current slide and resets interval if needed
 function currentSlide5(n){
-  clearInterval(myTimer5);
-  myTimer5 = setInterval(function(){plusSlides5(n + 1)}, 4000);
   showSlides5(slideIndex5 = n);
 }
 

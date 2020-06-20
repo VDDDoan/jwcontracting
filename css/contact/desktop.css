@@ -1,19 +1,9 @@
 @media (min-width: 475px) and (min-height: 500px) {
-  header .logo-container {
-    padding-top: 5vh;
-    margin-bottom: 5vh;
-  }
-  header .logo-container .logo img {
-    width: 75vw;
-    max-width: 500px;
-  }
-  header .head-container {
+  header .burger {
     display: none;
   }
-  header .line-desktop {
-    border-top: 1px solid #ef9629;
-  }
-  header .menu-container {
+  header .logo-container {
+    width: 35vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -28,18 +18,45 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  header .logo-container img {
+    width: 80%;
+    padding: 0;
+    padding-left: 10%;
+    max-width: 450px;
+  }
+  header .menu-container nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   header .menu-container .nav {
     position: relative;
-    width: 100vw;
+    width: 65vw;
     height: 5vh;
-    top: 0;
+    top: 5vh;
+    background-color: transparent;
+    margin-bottom: 10vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
     -webkit-transition-property: none;
     transition-property: none;
   }
-  header .menu-container .nav ul {
-    width: 75vw;
+  header .menu-container ul {
+    width: 65vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -55,23 +72,23 @@
             align-items: center;
     text-align: center;
   }
-  header .menu-container .nav ul li {
-    display: in-line;
+  header .menu-container ul li {
     text-align: center;
     opacity: 1;
     padding: 0;
-    width: 25vw;
+    width: 15vw;
     min-width: 50px;
   }
-  header .menu-container .nav ul li a:hover {
-    font-size: 18px;
-  }
-  header .menu-container .nav ul li a {
-    font-size: 17px;
+  header .menu-container ul li a {
+    font-size: 0.8em;
     letter-spacing: 4px;
+    font-weight: bold;
   }
-  header .menu-container .nav ul li a .active {
-    font-size: 19px;
+  header .menu-container ul li a .active {
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+    border: 2px solid #ef9629;
   }
   #contact-container {
     display: -webkit-box;
@@ -87,6 +104,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: 5vh;
   }
   fieldset {
     display: -webkit-box;
@@ -104,7 +122,7 @@
             align-items: center;
     width: 50vw;
     min-width: 500px;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0;
   }
   fieldset .input-field, fieldset .dropdown-field, fieldset .message-field {
@@ -143,19 +161,19 @@
     width: 0;
     height: 0;
     border: 6px solid transparent;
-    border-color: #fff transparent transparent transparent;
+    border-color: #000 transparent transparent transparent;
   }
   fieldset .select-selected.select-arrow-active:after {
-    border-color: transparent transparent #fff transparent;
+    border-color: transparent transparent #000 transparent;
     top: 7px;
   }
   fieldset .select-selected {
-    background-color: #161616;
+    background-color: white;
   }
   fieldset .select-items div, fieldset .select-selected {
-    color: #e9e9e9;
+    color: #171717;
     padding: 8px 16px;
-    border: 2px solid #e9e9e9;
+    border: 2px solid #171717;
     border-radius: 5px;
     width: 100%;
     cursor: pointer;
@@ -166,7 +184,7 @@
   }
   fieldset .select-items {
     position: absolute;
-    background-color: #161616;
+    background-color: white;
     top: 100%;
     left: 0;
     right: 0;

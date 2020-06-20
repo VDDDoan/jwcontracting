@@ -2,30 +2,13 @@
     header{
         .logo-container{
             .logo img{
-                height: 30vh;
-                width: auto;
-                padding-top:5vh;
-            }
-        }
-        .head-container{
-            height: 15vh;
-            #hamburger-menu{
-                height: 8vh;
-                img{
-                    height: 10vh;
-                    max-height: 32px;
-                    min-height: 30px;
-                    padding-top: 2vh;
-                }
+                width: 40%;
             }
         }
         .menu-container{
             .nav{
                 width: 100vw;
-                height: 89vh;
-                top: 11vh;
             }
         }
     }
-
 }
