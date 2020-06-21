@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/contact/mobile.css">
         <link rel="stylesheet" href="css/contact/landscape.css">
         <link rel="stylesheet" href="css/contact/desktop.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="Javascript/contact/scripts.js" defer></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
@@ -66,11 +67,11 @@
                     </div>
                     <div class="input-field">
                         <label for="email-input">E-mail</label><br>
-                        <input type="text" id="email-input" name="email-input" placeholder="Enter your e-mail" class="form-control" required><br>
+                        <input type="email" id="email-input" name="email-input" placeholder="Enter your e-mail" class="form-control" required><br>
                     </div>
                     <div class="input-field">
                         <label for="phone-input">Phone Number</label><br>
-                        <input type="text" id="phone-input" name="phone-input" placeholder="Enter your phone number" class="form-control" required><br>
+                        <input type="tel" id="phone-input" name="phone-input" placeholder="Enter your phone number" class="form-control" required><br>
                     </div>
                     <div class="input-field">
                         <label for="address-input">Address</label><br>
@@ -115,7 +116,7 @@
                 </fieldset>
                 <div class="center-button">
                     <div class="button-container">
-                        <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="recaptcha_callback"></div>
+                        <div class="g-recaptcha" data-sitekey="6LfJX6cZAAAAAOj8G1J3RCB6d9tVKQWVDj-0tTyt" data-callback="recaptcha_callback"></div>
                         <input type="submit" disabled class="button" id="submit-btn" value="Submit">
                     </div>     
                 </div>          

@@ -102,9 +102,50 @@ if (window.matchMedia("(min-width: 475px) and (min-height: 500px").matches)
   document.addEventListener("click", closeAllSelect);
 }
 
-function ccb (response){
-  $(':input[type="submit"]').prop('disabled',false);
-}
+$(document).ready(function() {
+
+  $("#submit-btn").click(function(e) {
+      e.preventDefault();
+
+      var name = $("#name-input").val(),
+          email = $("#email-input").val(),
+          phone = $("#phone-input").val(),
+          address = $("#address-input").val(),
+          project = $("#project-input").val(),
+          budget = $("#budget-input").val(),
+          message = $("#description-input").val();
+    console.log(JSON.stringify({
+      'name': name,
+      'email': email,
+      'phone': phone,
+      'address': address,
+      'project': project,
+      'budget': budget,
+      'message': message
+  }));
+
+    /*  $.ajax({
+          type: "POST",
+          url: '',
+          contentType: 'application/json',
+          data: JSON.stringify({
+              'name': name,
+              'email': email,
+              'phone': phone,
+              'address': address,
+              'project': project,
+              'budget': budget,
+              'message': message
+          }),
+          success: function(res){
+              $('#contact-submit').text('Email was sent.');
+          },
+          error: function(){
+              $('#contact-submit').text('Error.');
+          }
+      });*/
+  })
+});
 
 function recaptcha_callback(){
   var submitBtn = document.querySelector('#submit-btn');
