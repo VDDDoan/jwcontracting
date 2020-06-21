@@ -101,3 +101,13 @@ if (window.matchMedia("(min-width: 475px) and (min-height: 500px").matches)
   then close all select boxes: */
   document.addEventListener("click", closeAllSelect);
 }
+
+function ccb (response){
+  $(':input[type="submit"]').prop('disabled',false);
+}
+
+function recaptcha_callback(){
+  var submitBtn = document.querySelector('#submit-btn');
+  submitBtn.removeAttribute('disabled');
+  submitBtn.style.cursor = 'pointer';
+}

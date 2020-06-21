@@ -8,6 +8,7 @@ $font-active: 0.9em;
 $font-header: 1em;
 $mobile-color: rgb(22,22,22);
 $mobile-text: rgb(233,233,233);
+$button-color: rgb(255, 166, 64);
 *{
     margin: 0;
     padding: 0;
@@ -260,17 +261,22 @@ h3{
         align-items: center;
         justify-content: center;
         .request-container{
-            width: 160px;
-            height: 40px;
-            border-radius: 30px;
-            border: 2px solid $font-color;
-            a{
+            button{
+                width: 160px;
+                height: 40px;
+                border-radius: 30px;
+                border: 2px solid $button-color;
                 text-decoration: none;
-                background-color:$background-color;
                 color: $font-color;
                 font-size: $font-header;
                 text-transform: uppercase;
                 letter-spacing: 2px;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: $button-color;
+                border-color: $font-color;
+                color: $mobile-text;
             }
         }
 

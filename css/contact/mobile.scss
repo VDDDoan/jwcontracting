@@ -8,6 +8,7 @@ $font-active: 0.9em;
 $font-header: 1em;
 $mobile-color: rgb(22,22,22);
 $mobile-text: rgb(233,233,233);
+$button-color: rgb(255, 166, 64);
 
 *{
     margin: 0;
@@ -132,21 +133,34 @@ header {
         background-color: white;
     }
 }
-
-.contact-icons-container{
-    display: flex;
-    flex-direction:column;
-    .contact-icon{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    img{
-        width: auto;
-        min-height: 40px;
-        max-height: 45px;
+.center-icons{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    .contact-icons-container{
+        flex-direction:column;
+        margin: 3vh 0 5vh 0;
+        .contact-icon{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 2vh 5vw 0 5vw;
+            p{
+                margin-left: 5vw;
+                a{
+                    text-decoration: none;
+                    color:$font-color;
+                }
+            }
+        }
+        img{
+            width: auto;
+            min-height: 40px;
+            max-height: 45px;
+        }
     }
 }
+
 
 legend{
     text-align: center;
@@ -162,7 +176,7 @@ legend{
 
 fieldset{
     width: 90vw;
-    margin: 5vw 0 5vh 5vw;
+    margin: 0 0 5vh 5vw;
     .input-field, .dropdown-field, .message-field{
         width: 80vw;
         margin: 4vh 0 0 5vw;
@@ -270,21 +284,28 @@ input:-webkit-autofill{
     .button-container{
         display: flex;
         text-align: center;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        button{
-            color: $font-color;
-            font-size: 25px;
-            letter-spacing: 5px;
-            background-color: $background-color;
-            border: 2px solid $font-color;
-            width: 160px;
-            height: 38px;
-            border-radius: 30px;
-        }
     }
 }
+#submit-btn{
+    margin-top: 5vh;
+    color: $font-color;
+    font-size: $font-header;
+    letter-spacing: 4px;
+    border: 2px solid $button-color;
+    width: 160px;
+    height: 38px;
+    border-radius: 30px;
+    cursor: not-allowed;
+}
+#submit-btn:hover:enabled{
+    background-color: $button-color;
+    border-color: $font-color;
+    color: $mobile-text;
+}
+
 
 
 // footer

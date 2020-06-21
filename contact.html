@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/contact/landscape.css">
         <link rel="stylesheet" href="css/contact/desktop.css">
         <script src="Javascript/contact/scripts.js" defer></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body>
         <header>
@@ -39,22 +40,22 @@
             </div>
         </header>
         <div class="line"></div>
-
-        <div class="contact-icons-container">
-            <div class="contact-icon">
-                <a href="tel:6047007499"><img src="images/icons/text-contact.png"></a>
-                <p>Give us a call or text at <a href="tel:6047007499">604-700-7499!</a></p>
-            </div>
-            <div class="contact-icon">
-                <a href="#contact-form"><img src="images/icons/form-contact.png"></a>
-                <p>Fill out the contact form below and we will contact you!</p>
-            </div>
-            <div class="contact-icon">
-                <a href="mailto:planpacificconstruction@gmail.com"><img src="images/icons/email-contact.png"></a>
-                <p>Give us an email at <a href="mailto:planpacificconstruction@gmail.com">planpacificconstruction@gmail.com</a></p>
+        <div class="center-icons">
+            <div class="contact-icons-container">
+                <div class="contact-icon">
+                    <a href="#contact-form"><img src="images/icons/form-contact.png"></a>
+                    <p>Fill out the contact form below and we will contact you!</p>
+                </div>
+                <div class="contact-icon">
+                    <a href="mailto:planpacificconstruction@gmail.com"><img src="images/icons/email-contact.png"></a>
+                    <p>Give us an email at <a href="mailto:planpacificconstruction@gmail.com">planpacificconstruction@gmail.com</a></p>
+                </div>
+                <div class="contact-icon">
+                    <a href="tel:6047007499"><img src="images/icons/text-contact.png"></a>
+                    <p>Give us a call or text at <a href="tel:6047007499">604-700-7499!</a></p>
+                </div>
             </div>
         </div>
-
         <div id="contact-container">
             <form id="contact-form">
                 <fieldset>
@@ -114,7 +115,8 @@
                 </fieldset>
                 <div class="center-button">
                     <div class="button-container">
-                        <button type="button" class="button">Submit</button>
+                        <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="recaptcha_callback"></div>
+                        <input type="submit" disabled class="button" id="submit-btn" value="Submit">
                     </div>     
                 </div>          
             </form>

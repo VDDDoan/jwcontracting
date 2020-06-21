@@ -356,20 +356,23 @@ h3 {
           justify-content: center;
 }
 
-#submit #submit-button .request-container {
+#submit #submit-button .request-container button {
   width: 160px;
   height: 40px;
   border-radius: 30px;
-  border: 2px solid #161616;
-}
-
-#submit #submit-button .request-container a {
+  border: 2px solid #ffa640;
   text-decoration: none;
-  background-color: white;
   color: #161616;
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 2px;
+  cursor: pointer;
+}
+
+#submit #submit-button .request-container button:hover {
+  background-color: #ffa640;
+  border-color: #161616;
+  color: #e9e9e9;
 }
 
 #line {

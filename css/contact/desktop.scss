@@ -21,8 +21,7 @@ $font-header: 1em;
             align-items: center;
             img{
                 width: 80%;
-                padding: 0;
-                padding-left:10%;
+                padding: 15px 0 0 15px;
                 max-width: 450px;
             }
         }
@@ -75,12 +74,13 @@ $font-header: 1em;
     }
 
 
+
+
     #contact-container{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 5vh;
     }
     fieldset{
         display: flex;

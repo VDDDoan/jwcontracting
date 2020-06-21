@@ -20,8 +20,7 @@
   }
   header .logo-container img {
     width: 80%;
-    padding: 0;
-    padding-left: 10%;
+    padding: 15px 0 0 15px;
     max-width: 450px;
   }
   header .menu-container nav {
@@ -104,7 +103,6 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 5vh;
   }
   fieldset {
     display: -webkit-box;
