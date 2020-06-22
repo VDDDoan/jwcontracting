@@ -114,19 +114,20 @@ $(document).ready(function() {
           project = $("#project-input").val(),
           budget = $("#budget-input").val(),
           message = $("#description-input").val();
-    console.log(JSON.stringify({
-      'name': name,
-      'email': email,
-      'phone': phone,
-      'address': address,
-      'project': project,
-      'budget': budget,
-      'message': message
-  }));
 
-    /*  $.ajax({
+      console.log(JSON.stringify({
+        'name': name,
+        'email': email,
+        'phone': phone,
+        'address': address,
+        'project': project,
+        'budget': budget,
+        'message': message
+    }));
+
+      $.ajax({
           type: "POST",
-          url: '',
+          url: 'https://knkfax7wyf.execute-api.ca-central-1.amazonaws.com/default',
           contentType: 'application/json',
           data: JSON.stringify({
               'name': name,
@@ -138,15 +139,14 @@ $(document).ready(function() {
               'message': message
           }),
           success: function(res){
-              $('#contact-submit').text('Email was sent.');
+              $('#description-input').text('Email was sent.');
           },
           error: function(){
-              $('#contact-submit').text('Error.');
+              $('#description-input').text('Error.');
           }
-      });*/
+        })
   })
 });
-
 function recaptcha_callback(){
   var submitBtn = document.querySelector('#submit-btn');
   submitBtn.removeAttribute('disabled');

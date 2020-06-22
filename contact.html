@@ -58,7 +58,7 @@
             </div>
         </div>
         <div id="contact-container">
-            <form id="contact-form">
+            <form id="contact-form" action="https://knkfax7wyf.execute-api.ca-central-1.amazonaws.com/default" method="post" enctype="application/json">
                 <fieldset>
                     <legend><h2>Contact</h2></legend>
                     <div class="input-field">
@@ -117,7 +117,7 @@
                 <div class="center-button">
                     <div class="button-container">
                         <div class="g-recaptcha" data-sitekey="6LfJX6cZAAAAAOj8G1J3RCB6d9tVKQWVDj-0tTyt" data-callback="recaptcha_callback"></div>
-                        <input type="submit" disabled class="button" id="submit-btn" value="Submit">
+                        <input type="submit" disabled class="button" id="submit-btn" data-submit="...Sending" value="Submit">
                     </div>     
                 </div>          
             </form>
