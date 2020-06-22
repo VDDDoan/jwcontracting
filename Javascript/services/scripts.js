@@ -66,7 +66,7 @@ function plusSlides1(n){
 
 //Controls the current slide and resets interval if needed
 function currentSlide1(n){
-  showSlides(n);
+  showSlides1(slideIndex1=n);
 }
 
 function showSlides1(n){
@@ -94,12 +94,12 @@ showSlides2(slideIndex2);
 
 // NEXT AND PREVIOUS CONTROL
 function plusSlides2(n){
-  showSlides(slideIndex2 += n);
+  showSlides2(slideIndex2 += n);
 }
 
 //Controls the current slide and resets interval if needed
 function currentSlide2(n){
-  showSlides(slideIndex2 = n);
+  showSlides2(slideIndex2 = n);
 }
 
 function showSlides2(n){
@@ -125,7 +125,7 @@ showSlides3(slideIndex3);
 
 // NEXT AND PREVIOUS CONTROL
 function plusSlides3(n){
-  showSlides3(slideIndex += n);
+  showSlides3(slideIndex3 += n);
 }
 
 //Controls the current slide and resets interval if needed

@@ -306,6 +306,18 @@ input:-webkit-autofill{
     color: $mobile-text;
 }
 
+#form-response{
+    font-size: $font-header;
+    display:none;
+    letter-spacing: 1px;
+    color: black;
+    margin: 5vh auto 5vh auto;
+    text-align:center;
+    width: auto;
+
+}
+
+
 
 
 // footer

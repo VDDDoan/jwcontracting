@@ -139,10 +139,13 @@ $(document).ready(function() {
               'message': message
           }),
           success: function(res){
-              $('#description-input').text('Email was sent.');
+              $('#submit-btn').attr("disabled", true);
+              $('#submit-btn').hide();
+              $('#form-response').text("Thank you for your inquiry. We will respond as soon as possible.");
+              $('#form-response').show();
           },
           error: function(){
-              $('#description-input').text('Error.');
+              $('#submit-btn').text('Error.');
           }
         })
   })
@@ -152,3 +155,4 @@ function recaptcha_callback(){
   submitBtn.removeAttribute('disabled');
   submitBtn.style.cursor = 'pointer';
 }
+
